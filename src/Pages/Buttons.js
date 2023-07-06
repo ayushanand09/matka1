@@ -49,7 +49,7 @@ const Buttons = () => {
   const handleTriggerClick1 = () => {
     console.log(click);
     click = click + 1;
-    if (click % 2 == 0) {
+    if (click % 2 === 0) {
       setIsClicked1(false);
       setShowButtons1(false);
     } else {
@@ -59,7 +59,7 @@ const Buttons = () => {
   };
   const handleTriggerClick2 = () => {
     click = click + 1;
-    if (click % 2 == 0) {
+    if (click % 2 === 0) {
       setIsClicked2(false);
       setShowButtons2(false);
     } else {
@@ -69,7 +69,7 @@ const Buttons = () => {
   };
   const handleTriggerClick3 = () => {
     click = click + 1;
-    if (click % 2 == 0) {
+    if (click % 2 === 0) {
       setIsClicked3(false);
       setShowButtons3(false);
     } else {
@@ -79,7 +79,7 @@ const Buttons = () => {
   };
   const handleTriggerClick4 = () => {
     click = click + 1;
-    if (click % 2 == 0) {
+    if (click % 2 === 0) {
       setIsClicked4(false);
       setShowButtons4(false);
     } else {
@@ -89,7 +89,7 @@ const Buttons = () => {
   };
   const handleTriggerClick5 = () => {
     click = click + 1;
-    if (click % 2 == 0) {
+    if (click % 2 === 0) {
       setIsClicked5(false);
       setShowButtons5(false);
     } else {
@@ -99,7 +99,7 @@ const Buttons = () => {
   };
   const handleTriggerClick6 = () => {
     click = click + 1;
-    if (click % 2 == 0) {
+    if (click % 2 === 0) {
       setIsClicked6(false);
       setShowButtons6(false);
     } else {
@@ -109,7 +109,7 @@ const Buttons = () => {
   };
   const handleTriggerClick7 = () => {
     click = click + 1;
-    if (click % 2 == 0) {
+    if (click % 2 === 0) {
       setIsClicked7(false);
       setShowButtons7(false);
     } else {
@@ -119,7 +119,7 @@ const Buttons = () => {
   };
   const handleTriggerClick8 = () => {
     click = click + 1;
-    if (click % 2 == 0) {
+    if (click % 2 === 0) {
       setIsClicked8(false);
       setShowButtons8(false);
     } else {
@@ -129,7 +129,7 @@ const Buttons = () => {
   };
   const handleTriggerClick9 = () => {
     click = click + 1;
-    if (click % 2 == 0) {
+    if (click % 2 === 0) {
       setIsClicked9(false);
       setShowButtons9(false);
     } else {

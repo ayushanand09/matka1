@@ -19,7 +19,6 @@ body {
 .container h1 {
   color: white;
   text-align: center;
-  top: 10%;
   padding: 0.3rem;
   width: 11rem;
   --border-size: 3px;
@@ -49,4 +48,13 @@ body {
   syntax: "<angle>";
   inherits: true;
   initial-value: 0turn;
+}
+
+@media screen and (max-width:445px) {
+  .container h1
+  {
+    width: 30%;
+    font-size: 18px;
+  }
+  
 }
