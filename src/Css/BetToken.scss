@@ -1,0 +1,78 @@
+.token_container
+{
+    width: 100%;    
+    position: absolute;
+    top: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .main_tokens
+    {
+        button{
+            background: none;
+            outline: none;
+            border: none;
+            img{
+                width: 100px;
+                height: 100px;
+                margin: 0.8rem;
+            }
+            :hover{
+                transform: scale(1.2);
+            }
+        }
+    }
+}
+@media screen and (max-width:1144px ) and (min-width:787px) {
+
+    .token_container
+    {
+        .main_tokens
+        {
+            button{
+                background: none;
+                outline: none;
+                border: none;
+                img{
+                    width: 90px;
+                    height: 90px;
+                    margin: 0.4rem;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:786px) {
+    .token_container
+    {
+        .main_tokens
+        {
+            button{
+                background: none;
+                outline: none;
+                border: none;
+                img{
+                    width: 80px;
+                    height: 80px;
+                    margin: 0.4rem;
+                }
+            }
+        }
+    }
+    
+}
+@media screen and (max-width:448px) {
+    .token_container
+    {
+        .main_tokens
+        {
+            button{
+                img{
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+        }
+    }
+    
+}

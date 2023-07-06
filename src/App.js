@@ -1,21 +1,19 @@
-import './App.css';
-import BetButtons from './Pages/BetButtons';
-import Buttons from './Pages/Buttons';
-import Cards from './Pages/Cards';
-import Home from './Pages/Home';
-import Tokens from './Pages/Tokens';
+import "./App.css";
+import BetButtons from "./Components/BetButtons";
+import Buttons from "./Components/Buttons";
+import Cards from "./Components/Cards";
+import Home from "./Pages/Home";
+import Tokens from "./Components/Tokens";
 
-const App  = () => {
+const App = () => {
   return (
     <div>
-      <Home/>
       <Home />
-      <Cards />
-      <Tokens />
-      <BetButtons />
-      <Buttons />
+      {/* <Tokens /> */}
+      {/* <BetButtons /> */}
+      {/* <Buttons /> */}
     </div>
   );
-}
+};
 
 export default App;

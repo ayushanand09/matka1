@@ -9,7 +9,7 @@ body {
 }
   
 .container {
-  background-image: url("../../public/Assets/Background/background.jpg");
+  background-image: url("../Assets/Background/background.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
