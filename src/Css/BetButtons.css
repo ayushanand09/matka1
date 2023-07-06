@@ -1,13 +1,15 @@
 .timer-bar-container {
   border-radius: 2rem;
   display: flex;
-  /* justify-content: center; */
-  /* align-items: center; */
+  
+  /* position is set to absolute */ 
   position: absolute;
   top: 45%;
-  left: 35%;
+  left: 40%;
   width: 20%;
   height: 10px;
+  /* justify-content: center; */
+  /* align-items: center; */
   /* position: relative; */
   /* background-color: blue; */
 }
