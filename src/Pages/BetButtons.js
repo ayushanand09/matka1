@@ -69,8 +69,8 @@ const BetButtons = () => {
         {displayBet && (
           <>
             <div className="bet-add-drop">
-              <button className="remove">Remove</button>
-              <button className="rebetX2">Rebet x2</button>
+              <button className="remove-rebet">Remove</button>
+              <button className="remove-rebet">Rebet x2</button>
             </div>
           </>
         )}

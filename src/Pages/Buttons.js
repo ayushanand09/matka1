@@ -19,33 +19,25 @@ const ButtonContent = ({ content, onBack, id }) => {
 };
 
 const Buttons = () => {
-  const [showSPButtons1, setShowButtons1] = useState(false);
+  const [showButtons1, setShowButtons1] = useState(false);
   const [isClicked1, setIsClicked1] = useState(false);
-  const [showSPButtons2, setShowButtons2] = useState(false);
+  const [showButtons2, setShowButtons2] = useState(false);
   const [isClicked2, setIsClicked2] = useState(false);
-  const [showSPButtons3, setShowButtons3] = useState(false);
+  const [showButtons3, setShowButtons3] = useState(false);
   const [isClicked3, setIsClicked3] = useState(false);
-  const [showSPButtons4, setShowButtons4] = useState(false);
+  const [showButtons4, setShowButtons4] = useState(false);
   const [isClicked4, setIsClicked4] = useState(false);
-  const [showSPButtons5, setShowButtons5] = useState(false);
+  const [showButtons5, setShowButtons5] = useState(false);
   const [isClicked5, setIsClicked5] = useState(false);
-  const [showSPButtons6, setShowButtons6] = useState(false);
+  const [showButtons6, setShowButtons6] = useState(false);
   const [isClicked6, setIsClicked6] = useState(false);
-  const [showSPButtons7, setShowButtons7] = useState(false);
+  const [showButtons7, setShowButtons7] = useState(false);
   const [isClicked7, setIsClicked7] = useState(false);
-  const [showSPButtons8, setShowButtons8] = useState(false);
+  const [showButtons8, setShowButtons8] = useState(false);
   const [isClicked8, setIsClicked8] = useState(false);
-  const [showSPButtons9, setShowButtons9] = useState(false);
+  const [showButtons9, setShowButtons9] = useState(false);
   const [isClicked9, setIsClicked9] = useState(false);
   
-  // const showSPBtns = () => {
-  //   setDisplaySPBtns(true);
-  // };
-
-  // const hideSPBtns = () => {
-  //   setDisplaySPBtns(false);
-  // };
-
   var click = 0;
   const handleTriggerClick1 = () => {
     console.log(click);
@@ -216,7 +208,7 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons1 && (
+            {showButtons1 && (
               <>
                 <div className="dropdown-options-set1">
                   <button> 137 </button>
@@ -248,7 +240,7 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons2 && (
+            {showButtons2 && (
               <>
                 <div className="dropdown-options-set1">
                   <button> 570 </button>
@@ -280,7 +272,7 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons3 && (
+            {showButtons3 && (
               <>
                 <div className="dropdown-options-set1">
                   <button> 570 </button>
@@ -312,7 +304,7 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons4 && (
+            {showButtons4 && (
               <>
                 <div className="dropdown-options-set1">
                   <button> 570 </button>
@@ -344,7 +336,7 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons5 && (
+            {showButtons5 && (
               <>
                 <div className="dropdown-options-set1">
                   <button> 570 </button>
@@ -376,7 +368,7 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons6 && (
+            {showButtons6 && (
               <>
                 <div className="dropdown-options-set1">
                   <button> 570 </button>
@@ -408,7 +400,7 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons7 && (
+            {showButtons7 && (
               <>
                 <div className="dropdown-options-set1">
                   <button> 570 </button>
@@ -418,7 +410,7 @@ const Buttons = () => {
                   <button> 390 </button>
                   <button> 147 </button>
                 </div>
-                <div className=".dropdown-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 679 </button>
                   <button> 345 </button>
                   <button> 138 </button>
@@ -440,7 +432,7 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons8 && (
+            {showButtons8 && (
               <>
                 <div className="dropdown-options-set1">
                   <button> 570 </button>
@@ -472,7 +464,7 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons9 && (
+            {showButtons9 && (
               <>
                 <div className="dropdown-options-set1">
                   <button> 570 </button>
@@ -527,7 +519,7 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons1 && (
+            {showButtons1 && (
               <>
                 <div className="dropdown-options-set1">
                   <button> 137 </button>
@@ -559,7 +551,7 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons2 && (
+            {showButtons2 && (
               <>
                 <div className="dropdown-options-set1">
                   <button> 570 </button>
@@ -591,7 +583,7 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons3 && (
+            {showButtons3 && (
               <>
                 <div className="dropdown-options-set1">
                   <button> 570 </button>
@@ -623,7 +615,7 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons4 && (
+            {showButtons4 && (
               <>
                 <div className="dropdown-options-set1">
                   <button> 570 </button>
@@ -655,7 +647,7 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons5 && (
+            {showButtons5 && (
               <>
                 <div className="dropdown-options-set1">
                   <button> 570 </button>
@@ -687,7 +679,7 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons6 && (
+            {showButtons6 && (
               <>
                 <div className="dropdown-options-set1">
                   <button> 570 </button>
@@ -719,7 +711,7 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons7 && (
+            {showButtons7 && (
               <>
                 <div className="dropdown-options-set1">
                   <button> 570 </button>
@@ -729,7 +721,7 @@ const Buttons = () => {
                   <button> 390 </button>
                   <button> 147 </button>
                 </div>
-                <div className=".dropdown-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 679 </button>
                   <button> 345 </button>
                   <button> 138 </button>
@@ -751,7 +743,7 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons8 && (
+            {showButtons8 && (
               <>
                 <div className="dropdown-options-set1">
                   <button> 570 </button>
@@ -783,7 +775,7 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons9 && (
+            {showButtons9 && (
               <>
                 <div className="dropdown-options-set1">
                   <button> 570 </button>
@@ -838,7 +830,7 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons1 && (
+            {showButtons1 && (
               <>
                 <div className="dropdown-options-set1">
                   <button> 137 </button>
@@ -870,7 +862,7 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons2 && (
+            {showButtons2 && (
               <>
                 <div className="dropdown-options-set1">
                   <button> 570 </button>
@@ -902,7 +894,7 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons3 && (
+            {showButtons3 && (
               <>
                 <div className="dropdown-options-set1">
                   <button> 570 </button>
@@ -934,7 +926,7 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons4 && (
+            {showButtons4 && (
               <>
                 <div className="dropdown-options-set1">
                   <button> 570 </button>
@@ -966,7 +958,7 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons5 && (
+            {showButtons5 && (
               <>
                 <div className="dropdown-options-set1">
                   <button> 570 </button>
@@ -998,7 +990,7 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons6 && (
+            {showButtons6 && (
               <>
                 <div className="dropdown-options-set1">
                   <button> 570 </button>
@@ -1030,7 +1022,7 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons7 && (
+            {showButtons7 && (
               <>
                 <div className="dropdown-options-set1">
                   <button> 570 </button>
@@ -1040,7 +1032,7 @@ const Buttons = () => {
                   <button> 390 </button>
                   <button> 147 </button>
                 </div>
-                <div className=".dropdown-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 679 </button>
                   <button> 345 </button>
                   <button> 138 </button>
@@ -1062,7 +1054,7 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons8 && (
+            {showButtons8 && (
               <>
                 <div className="dropdown-options-set1">
                   <button> 570 </button>
@@ -1094,7 +1086,7 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons9 && (
+            {showButtons9 && (
               <>
                 <div className="dropdown-options-set1">
                   <button> 570 </button>
@@ -1149,7 +1141,7 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons1 && (
+            {showButtons1 && (
               <>
                 <div className="dropdown-options-set1">
                   <button> 137 </button>
@@ -1181,7 +1173,7 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons2 && (
+            {showButtons2 && (
               <>
                 <div className="dropdown-options-set1">
                   <button> 570 </button>
@@ -1213,7 +1205,7 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons3 && (
+            {showButtons3 && (
               <>
                 <div className="dropdown-options-set1">
                   <button> 570 </button>
@@ -1245,7 +1237,7 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons4 && (
+            {showButtons4 && (
               <>
                 <div className="dropdown-options-set1">
                   <button> 570 </button>
@@ -1277,7 +1269,7 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons5 && (
+            {showButtons5 && (
               <>
                 <div className="dropdown-options-set1">
                   <button> 570 </button>
@@ -1309,7 +1301,7 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons6 && (
+            {showButtons6 && (
               <>
                 <div className="dropdown-options-set1">
                   <button> 570 </button>
@@ -1341,7 +1333,7 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons7 && (
+            {showButtons7 && (
               <>
                 <div className="dropdown-options-set1">
                   <button> 570 </button>
@@ -1351,7 +1343,7 @@ const Buttons = () => {
                   <button> 390 </button>
                   <button> 147 </button>
                 </div>
-                <div className=".dropdown-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 679 </button>
                   <button> 345 </button>
                   <button> 138 </button>
@@ -1373,7 +1365,7 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons8 && (
+            {showButtons8 && (
               <>
                 <div className="dropdown-options-set1">
                   <button> 570 </button>
@@ -1405,7 +1397,7 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons9 && (
+            {showButtons9 && (
               <>
                 <div className="dropdown-options-set1">
                   <button> 570 </button>
@@ -1460,7 +1452,7 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons1 && (
+            {showButtons1 && (
               <>
                 <div className="dropdown-options-set1">
                   <button> 137 </button>
@@ -1492,7 +1484,7 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons2 && (
+            {showButtons2 && (
               <>
                 <div className="dropdown-options-set1">
                   <button> 570 </button>
@@ -1524,7 +1516,7 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons3 && (
+            {showButtons3 && (
               <>
                 <div className="dropdown-options-set1">
                   <button> 570 </button>
@@ -1556,7 +1548,7 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons4 && (
+            {showButtons4 && (
               <>
                 <div className="dropdown-options-set1">
                   <button> 570 </button>
@@ -1588,7 +1580,7 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons5 && (
+            {showButtons5 && (
               <>
                 <div className="dropdown-options-set1">
                   <button> 570 </button>
@@ -1620,7 +1612,7 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons6 && (
+            {showButtons6 && (
               <>
                 <div className="dropdown-options-set1">
                   <button> 570 </button>
@@ -1652,7 +1644,7 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons7 && (
+            {showButtons7 && (
               <>
                 <div className="dropdown-options-set1">
                   <button> 570 </button>
@@ -1662,7 +1654,7 @@ const Buttons = () => {
                   <button> 390 </button>
                   <button> 147 </button>
                 </div>
-                <div className=".dropdown-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 679 </button>
                   <button> 345 </button>
                   <button> 138 </button>
@@ -1684,7 +1676,7 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons8 && (
+            {showButtons8 && (
               <>
                 <div className="dropdown-options-set1">
                   <button> 570 </button>
@@ -1716,7 +1708,7 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons9 && (
+            {showButtons9 && (
               <>
                 <div className="dropdown-options-set1">
                   <button> 570 </button>
@@ -1771,7 +1763,7 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons1 && (
+            {showButtons1 && (
               <>
                 <div className="dropdown-options-set1">
                   <button> 137 </button>
@@ -1803,7 +1795,7 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons2 && (
+            {showButtons2 && (
               <>
                 <div className="dropdown-options-set1">
                   <button> 570 </button>
@@ -1835,7 +1827,7 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons3 && (
+            {showButtons3 && (
               <>
                 <div className="dropdown-options-set1">
                   <button> 570 </button>
@@ -1867,7 +1859,7 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons4 && (
+            {showButtons4 && (
               <>
                 <div className="dropdown-options-set1">
                   <button> 570 </button>
@@ -1899,7 +1891,7 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons5 && (
+            {showButtons5 && (
               <>
                 <div className="dropdown-options-set1">
                   <button> 570 </button>
@@ -1931,7 +1923,7 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons6 && (
+            {showButtons6 && (
               <>
                 <div className="dropdown-options-set1">
                   <button> 570 </button>
@@ -1963,7 +1955,7 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons7 && (
+            {showButtons7 && (
               <>
                 <div className="dropdown-options-set1">
                   <button> 570 </button>
@@ -1973,7 +1965,7 @@ const Buttons = () => {
                   <button> 390 </button>
                   <button> 147 </button>
                 </div>
-                <div className=".dropdown-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 679 </button>
                   <button> 345 </button>
                   <button> 138 </button>
@@ -1995,7 +1987,7 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons8 && (
+            {showButtons8 && (
               <>
                 <div className="dropdown-options-set1">
                   <button> 570 </button>
@@ -2027,7 +2019,7 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons9 && (
+            {showButtons9 && (
               <>
                 <div className="dropdown-options-set1">
                   <button> 570 </button>
