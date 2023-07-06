@@ -1,0 +1,17 @@
+.cards {
+  position: absolute;
+  right: 1%;
+  top: 1%;
+  background-color: black;
+  opacity: 0.8;
+  padding: 0.5rem;
+  color: rgba(206, 183, 9, 0.962);
+  font-size: 1rem;
+}
+
+img {
+    display: inline-block;
+    height: 2rem;
+    width: 1.8rem;
+    /* margin-top: 1rem; */
+}

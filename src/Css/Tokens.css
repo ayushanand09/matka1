@@ -1,0 +1,98 @@
+.tokens-outer {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+}
+.tokens {
+  animation: token-display 1s ease-in-out;
+}
+@keyframes token-display {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.token1 {
+  background-image: url("../../public/Assets/Chips/chip_1.png");
+  height: 6.5rem;
+  width: 6.5rem;
+  border-radius: 4rem;
+  margin-right: 2rem;
+}
+.token2 {
+  background-image: url("../../public/Assets/Chips/chip_5.png");
+  height: 6.5rem;
+  width: 6.5rem;
+  border-radius: 4rem;
+  margin-right: 2rem;
+}
+.token3 {
+  background-image: url("../../public/Assets/Chips/chip_10.png");
+  height: 6.5rem;
+  width: 6.5rem;
+  border-radius: 4rem;
+  margin-right: 2rem;
+}
+.token4 {
+  background-image: url("../../public/Assets/Chips/chip_20.png");
+  height: 6.5rem;
+  width: 6.5rem;
+  border-radius: 4rem;
+  margin-right: 2rem;
+}
+.token5 {
+  background-image: url("../../public/Assets/Chips/chip_50.png");
+  height: 6.5rem;
+  width: 6.5rem;
+  border-radius: 4rem;
+  margin-right: 2rem;
+}
+.token6 {
+  background-image: url("../../public/Assets/Chips/chip_100.png");
+  height: 6.5rem;
+  width: 6.8rem;
+  border-radius: 4rem;
+  margin-right: 2rem;
+}
+.token7 {
+  background-image: url("../../public/Assets/Chips/chip_250.png");
+  height: 6.5rem;
+  width: 6.5rem;
+  border-radius: 4rem;
+}
+.token1:hover {
+  transition: all 0.2s;
+  transform: scale(1.2);
+}
+.token2:hover {
+  transition: all 0.2s;
+  transform: scale(1.2);
+}
+.token3:hover {
+  transition: all 0.2s;
+  transform: scale(1.2);
+}
+.token4:hover {
+  transition: all 0.2s;
+  transform: scale(1.2);
+}
+.token5:hover {
+  transition: all 0.2s;
+  transform: scale(1.2);
+}
+.token6:hover {
+  transition: all 0.2s;
+  transform: scale(1.2);
+}
+.token7:hover {
+  transition: all 0.2s;
+  transform: scale(1.2);
+}
