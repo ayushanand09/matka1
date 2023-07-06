@@ -9,6 +9,11 @@ const App  = () => {
   return (
     <div>
       <Home/>
+      <Home />
+      <Cards />
+      <Tokens />
+      <BetButtons />
+      <Buttons />
     </div>
   );
 }

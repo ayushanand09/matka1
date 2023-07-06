@@ -1,0 +1,192 @@
+.container-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.new-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  
+  /* position is set to absolute, developer can change it */
+  position: absolute;
+  top: 80%;
+  left: 30%;
+  width: 40%;
+
+  /* margin: auto; */
+  /* margin-top:-3rem; */
+}
+
+.Primary-btn {
+  display: inline-block;
+  font-size: 1rem;
+  padding-top: 0.5rem;
+  padding-right: 1.4rem;
+  padding-left: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: red;
+  color: white;
+  margin: 0.8rem;
+}
+
+.ANK button {
+  background-color: rgba(227, 136, 10, 0.962);
+  font-size: 1rem;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  padding-right: 1.4rem;
+  padding-left: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.ANK-new {
+  background-color: #f03 !important;
+  color: white;
+  width: 19%;
+  padding: 1rem;
+}
+
+.back-btn {
+  /* width: 70%; */
+  color: white;
+  font-size: 1rem;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  padding-right: 1.4rem;
+  padding-left: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: blue !important;
+}
+
+.New {
+  color: white;
+  font-size: 1rem;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  padding-right: 1.4rem;
+  padding-left: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: #f03 !important;
+}
+.new-set {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#dropdown-btns {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+  top:8rem;
+  left: 3.5rem;
+  width: 90rem;
+  background-color: rgb(17, 17, 56);
+  padding: 1rem;
+  border-radius: 2rem;
+}
+
+.dropdown{
+  margin-top: 0.5rem;
+  padding-left: 2rem;
+  text-align: left;
+  font-size: 1rem;
+  width: 86%;
+  height: 2rem;
+  border-radius: 0.5rem;
+  padding-top: 0.5rem;
+}
+.angle {
+  display: block;
+  margin-right: 5px;
+  font-size: 1.2rem;
+  float: right;
+  -moz-transform: scale(1, -1);
+  -webkit-transform: scale(1, -1);
+  -o-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+  transform: scale(1, -1);
+}
+.uptick-animation {
+  animation: uptick 0.5s forwards;
+}
+@keyframes uptick {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1);
+    -moz-transform: scale(1, -1);
+    -webkit-transform: scale(1, -1);
+    -o-transform: scale(1, -1);
+    -ms-transform: scale(1, -1);
+    transform: scale(1, -1);
+  }
+}
+
+.downtick-animation {
+  animation: downtick 0.5s forwards;
+}
+@keyframes downtick {
+  from {
+    -moz-transform: scale(1, -1);
+    -webkit-transform: scale(1, -1);
+    -o-transform: scale(1, -1);
+    -ms-transform: scale(1, -1);
+    transform: scale(1, -1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.dropdown-options-set1 {
+  background-color: white;
+  width: 85%;
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  margin-top: 5px;
+  padding: 5px;
+  display: flex;
+}
+
+.dropdown-options-set1 button {
+  background-color: rgba(227, 136, 10, 0.962);
+  border-radius: 0.3rem;
+  margin-left: 6rem;
+  height: 2rem;
+  width: 6rem;
+  font-size: 1rem;
+  color: white;
+}
+
+.dropdown-options-set2 {
+  background-color: white;
+  width: 85%;
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  padding: 5px;
+  display: flex;
+}
+
+.dropdown-options-set2 button {
+  background-color: rgba(227, 136, 10, 0.962);
+  border-radius: 0.3rem;
+  margin-left: 6rem;
+  height: 2rem;
+  width: 6rem;
+  font-size: 1rem;
+  color: white;
+}

@@ -1,13 +1,16 @@
 .timer-bar-container {
   border-radius: 2rem;
   display: flex;
-  /* justify-content: center; */
-  /* align-items: center; */
-  position: absolute;
-  top: 45%;
-  left: 35%;
   width: 20%;
   height: 10px;
+
+  /* position is set to absolute */ 
+  position: absolute;
+  top: 45%;
+  left: 40%;
+  
+  /* justify-content: center; */
+  /* align-items: center; */
   /* position: relative; */
   /* background-color: blue; */
 }
@@ -75,8 +78,6 @@
 
 .bet-add-drop {
   margin-top: 1rem;
-  /* position: absolute; */
-  /* left: 40%; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -96,33 +97,13 @@
     opacity: 1;
   }
 }
-.remove {
-  /* bottom: 2rem; */
-  /* left: 30%; */
+.remove-rebet {
   border-radius: 0.5rem;
   width: 6.5rem;
   height: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* display: inline-block; */
-  margin: 1rem;
-  background-color: black;
-  color: white;
-  opacity: 0.6;
-  font-size: 1.3rem;
-}
-
-.rebetX2 {
-  /* bottom: 2rem; */
-  /* left: 30%; */
-  border-radius: 0.5rem;
-  width: 6.5rem;
-  height: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* display: inline-block; */
   margin: 1rem;
   background-color: black;
   color: white;

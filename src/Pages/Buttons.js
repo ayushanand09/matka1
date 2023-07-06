@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import "../Css/Buttons.css";
 
 const ButtonContent = ({ content, onBack, id }) => {
   return (
@@ -18,33 +19,25 @@ const ButtonContent = ({ content, onBack, id }) => {
 };
 
 const Buttons = () => {
-  const [showSPButtons1, setShowButtons1] = useState(false);
+  const [showButtons1, setShowButtons1] = useState(false);
   const [isClicked1, setIsClicked1] = useState(false);
-  const [showSPButtons2, setShowButtons2] = useState(false);
+  const [showButtons2, setShowButtons2] = useState(false);
   const [isClicked2, setIsClicked2] = useState(false);
-  const [showSPButtons3, setShowButtons3] = useState(false);
+  const [showButtons3, setShowButtons3] = useState(false);
   const [isClicked3, setIsClicked3] = useState(false);
-  const [showSPButtons4, setShowButtons4] = useState(false);
+  const [showButtons4, setShowButtons4] = useState(false);
   const [isClicked4, setIsClicked4] = useState(false);
-  const [showSPButtons5, setShowButtons5] = useState(false);
+  const [showButtons5, setShowButtons5] = useState(false);
   const [isClicked5, setIsClicked5] = useState(false);
-  const [showSPButtons6, setShowButtons6] = useState(false);
+  const [showButtons6, setShowButtons6] = useState(false);
   const [isClicked6, setIsClicked6] = useState(false);
-  const [showSPButtons7, setShowButtons7] = useState(false);
+  const [showButtons7, setShowButtons7] = useState(false);
   const [isClicked7, setIsClicked7] = useState(false);
-  const [showSPButtons8, setShowButtons8] = useState(false);
+  const [showButtons8, setShowButtons8] = useState(false);
   const [isClicked8, setIsClicked8] = useState(false);
-  const [showSPButtons9, setShowButtons9] = useState(false);
+  const [showButtons9, setShowButtons9] = useState(false);
   const [isClicked9, setIsClicked9] = useState(false);
-
-  // const showSPBtns = () => {
-  //   setDisplaySPBtns(true);
-  // };
-
-  // const hideSPBtns = () => {
-  //   setDisplaySPBtns(false);
-  // };
-
+  
   var click = 0;
   const handleTriggerClick1 = () => {
     console.log(click);
@@ -160,20 +153,19 @@ const Buttons = () => {
     {
       name: "ANK",
       id: 1,
-      // className: "Primary-btn",
-      nestedClasses: ["buttons", "Primary-btn", "btn1"],
+      nestedClasses: ["buttons", "Primary-btn"],
       content: (
         <>
           <div className="buttons">
             <div className="ANK">
-              <button className="ANK2">ANK</button>
+              <button className="ANK-new">ANK</button>
               <button value={1}>1</button>
               <button value={2}>2</button>
               <button value={3}>3</button>
               <button value={4}>4</button>
               <button value={5}>5</button>
               <br></br>
-              <button className="backANK" onClick={handleBack}>
+              <button className="back-btn" onClick={handleBack}>
                 BACK
               </button>
               <button value={6}>6</button>
@@ -190,13 +182,12 @@ const Buttons = () => {
       name: "SP",
       id: 2,
       nestedClasses: ["buttons", "Primary-btn"],
-      // className: "Primary-btn",
       content: (
         <>
-          <div className="new-sp-set">
-            <button className="SP-New">SP</button>
+          <div className="new-set">
+            <button className="New">SP</button>
             <button
-              className="backANK"
+              className="back-btn"
               onClick={() => {
                 handleBack();
               }}
@@ -204,10 +195,9 @@ const Buttons = () => {
               BACK
             </button>
           </div>
-          <div id="SP-btns">
-            <button className="SP1" onClick={handleTriggerClick1}>
-              {" "}
-              {/* SELECT ALL 1 <span className={`angle ${isClicked ? 'downtick-animation' : 'uptick-animation'}`}> ^ </span>{" "} */}
+          <div id="dropdown-btns">
+            <button className="dropdown" onClick={handleTriggerClick1}>
+              {" "} 
               SELECT ALL 1{" "}
               <span
                 className={`angle ${
@@ -218,9 +208,9 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons1 && (
+            {showButtons1 && (
               <>
-                <div className="SP1-options-set1">
+                <div className="dropdown-options-set1">
                   <button> 137 </button>
                   <button> 146 </button>
                   <button> 236 </button>
@@ -228,7 +218,7 @@ const Buttons = () => {
                   <button> 290 </button>
                   <button> 380 </button>
                 </div>
-                <div className="SP1-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 470 </button>
                   <button> 489 </button>
                   <button> 560 </button>
@@ -238,7 +228,7 @@ const Buttons = () => {
                 </div>
               </>
             )}
-            <button className="SP2" onClick={handleTriggerClick2}>
+            <button className="dropdown" onClick={handleTriggerClick2}>
               {" "}
               SELECT ALL 2
               <span
@@ -250,9 +240,9 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons2 && (
+            {showButtons2 && (
               <>
-                <div className="SP2-options-set1">
+                <div className="dropdown-options-set1">
                   <button> 570 </button>
                   <button> 237 </button>
                   <button> 480 </button>
@@ -260,7 +250,7 @@ const Buttons = () => {
                   <button> 390 </button>
                   <button> 147 </button>
                 </div>
-                <div className="SP2-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 679 </button>
                   <button> 345 </button>
                   <button> 138 </button>
@@ -270,7 +260,7 @@ const Buttons = () => {
                 </div>
               </>
             )}
-            <button className="SP3" onClick={handleTriggerClick3}>
+            <button className="dropdown" onClick={handleTriggerClick3}>
               {" "}
               SELECT ALL 3
               <span
@@ -282,9 +272,9 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons3 && (
+            {showButtons3 && (
               <>
-                <div className="SP2-options-set1">
+                <div className="dropdown-options-set1">
                   <button> 570 </button>
                   <button> 237 </button>
                   <button> 480 </button>
@@ -292,7 +282,7 @@ const Buttons = () => {
                   <button> 390 </button>
                   <button> 147 </button>
                 </div>
-                <div className="SP2-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 679 </button>
                   <button> 345 </button>
                   <button> 138 </button>
@@ -302,7 +292,7 @@ const Buttons = () => {
                 </div>
               </>
             )}
-            <button className="SP4" onClick={handleTriggerClick4}>
+            <button className="dropdown" onClick={handleTriggerClick4}>
               {" "}
               SELECT ALL 4
               <span
@@ -314,9 +304,9 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons4 && (
+            {showButtons4 && (
               <>
-                <div className="SP2-options-set1">
+                <div className="dropdown-options-set1">
                   <button> 570 </button>
                   <button> 237 </button>
                   <button> 480 </button>
@@ -324,7 +314,7 @@ const Buttons = () => {
                   <button> 390 </button>
                   <button> 147 </button>
                 </div>
-                <div className="SP2-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 679 </button>
                   <button> 345 </button>
                   <button> 138 </button>
@@ -334,7 +324,7 @@ const Buttons = () => {
                 </div>
               </>
             )}
-            <button className="SP5" onClick={handleTriggerClick5}>
+            <button className="dropdown" onClick={handleTriggerClick5}>
               {" "}
               SELECT ALL 5
               <span
@@ -346,9 +336,9 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons5 && (
+            {showButtons5 && (
               <>
-                <div className="SP2-options-set1">
+                <div className="dropdown-options-set1">
                   <button> 570 </button>
                   <button> 237 </button>
                   <button> 480 </button>
@@ -356,7 +346,7 @@ const Buttons = () => {
                   <button> 390 </button>
                   <button> 147 </button>
                 </div>
-                <div className="SP2-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 679 </button>
                   <button> 345 </button>
                   <button> 138 </button>
@@ -366,7 +356,7 @@ const Buttons = () => {
                 </div>
               </>
             )}
-            <button className="SP6" onClick={handleTriggerClick6}>
+            <button className="dropdown" onClick={handleTriggerClick6}>
               {" "}
               SELECT ALL 6
               <span
@@ -378,9 +368,9 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons6 && (
+            {showButtons6 && (
               <>
-                <div className="SP2-options-set1">
+                <div className="dropdown-options-set1">
                   <button> 570 </button>
                   <button> 237 </button>
                   <button> 480 </button>
@@ -388,7 +378,7 @@ const Buttons = () => {
                   <button> 390 </button>
                   <button> 147 </button>
                 </div>
-                <div className="SP2-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 679 </button>
                   <button> 345 </button>
                   <button> 138 </button>
@@ -398,7 +388,7 @@ const Buttons = () => {
                 </div>
               </>
             )}
-            <button className="SP7" onClick={handleTriggerClick7}>
+            <button className="dropdown" onClick={handleTriggerClick7}>
               {" "}
               SELECT ALL 7
               <span
@@ -410,9 +400,9 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons7 && (
+            {showButtons7 && (
               <>
-                <div className="SP2-options-set1">
+                <div className="dropdown-options-set1">
                   <button> 570 </button>
                   <button> 237 </button>
                   <button> 480 </button>
@@ -420,7 +410,7 @@ const Buttons = () => {
                   <button> 390 </button>
                   <button> 147 </button>
                 </div>
-                <div className="SP2-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 679 </button>
                   <button> 345 </button>
                   <button> 138 </button>
@@ -430,7 +420,7 @@ const Buttons = () => {
                 </div>
               </>
             )}
-            <button className="SP8" onClick={handleTriggerClick8}>
+            <button className="dropdown" onClick={handleTriggerClick8}>
               {" "}
               SELECT ALL 8
               <span
@@ -442,9 +432,9 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons8 && (
+            {showButtons8 && (
               <>
-                <div className="SP2-options-set1">
+                <div className="dropdown-options-set1">
                   <button> 570 </button>
                   <button> 237 </button>
                   <button> 480 </button>
@@ -452,7 +442,7 @@ const Buttons = () => {
                   <button> 390 </button>
                   <button> 147 </button>
                 </div>
-                <div className="SP2-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 679 </button>
                   <button> 345 </button>
                   <button> 138 </button>
@@ -462,7 +452,7 @@ const Buttons = () => {
                 </div>
               </>
             )}
-            <button className="SP9" onClick={handleTriggerClick9}>
+            <button className="dropdown" onClick={handleTriggerClick9}>
               {" "}
               SELECT ALL 9
               <span
@@ -474,9 +464,9 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons9 && (
+            {showButtons9 && (
               <>
-                <div className="SP2-options-set1">
+                <div className="dropdown-options-set1">
                   <button> 570 </button>
                   <button> 237 </button>
                   <button> 480 </button>
@@ -484,7 +474,7 @@ const Buttons = () => {
                   <button> 390 </button>
                   <button> 147 </button>
                 </div>
-                <div className="SP2-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 679 </button>
                   <button> 345 </button>
                   <button> 138 </button>
@@ -505,10 +495,10 @@ const Buttons = () => {
       nestedClasses: ["buttons", "Primary-btn"],
       content: (
         <>
-          <div className="new-sp-set">
-            <button className="SP-New">DP</button>
+          <div className="new-set">
+            <button className="New">DP</button>
             <button
-              className="backANK"
+              className="back-btn"
               onClick={() => {
                 handleBack();
               }}
@@ -516,9 +506,9 @@ const Buttons = () => {
               BACK
             </button>
           </div>
-          <div id="SP-btns">
-            <button className="SP1" onClick={handleTriggerClick1}>
-              {" "}
+          <div id="dropdown-btns">
+            <button className="dropdown" onClick={handleTriggerClick1}>
+              {" "}            
               SELECT ALL 1{" "}
               <span
                 className={`angle ${
@@ -529,9 +519,9 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons1 && (
+            {showButtons1 && (
               <>
-                <div className="SP1-options-set1">
+                <div className="dropdown-options-set1">
                   <button> 137 </button>
                   <button> 146 </button>
                   <button> 236 </button>
@@ -539,7 +529,7 @@ const Buttons = () => {
                   <button> 290 </button>
                   <button> 380 </button>
                 </div>
-                <div className="SP1-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 470 </button>
                   <button> 489 </button>
                   <button> 560 </button>
@@ -549,7 +539,7 @@ const Buttons = () => {
                 </div>
               </>
             )}
-            <button className="SP2" onClick={handleTriggerClick2}>
+            <button className="dropdown" onClick={handleTriggerClick2}>
               {" "}
               SELECT ALL 2
               <span
@@ -561,9 +551,9 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons2 && (
+            {showButtons2 && (
               <>
-                <div className="SP2-options-set1">
+                <div className="dropdown-options-set1">
                   <button> 570 </button>
                   <button> 237 </button>
                   <button> 480 </button>
@@ -571,7 +561,7 @@ const Buttons = () => {
                   <button> 390 </button>
                   <button> 147 </button>
                 </div>
-                <div className="SP2-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 679 </button>
                   <button> 345 </button>
                   <button> 138 </button>
@@ -581,7 +571,7 @@ const Buttons = () => {
                 </div>
               </>
             )}
-            <button className="SP3" onClick={handleTriggerClick3}>
+            <button className="dropdown" onClick={handleTriggerClick3}>
               {" "}
               SELECT ALL 3
               <span
@@ -593,9 +583,9 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons3 && (
+            {showButtons3 && (
               <>
-                <div className="SP2-options-set1">
+                <div className="dropdown-options-set1">
                   <button> 570 </button>
                   <button> 237 </button>
                   <button> 480 </button>
@@ -603,7 +593,7 @@ const Buttons = () => {
                   <button> 390 </button>
                   <button> 147 </button>
                 </div>
-                <div className="SP2-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 679 </button>
                   <button> 345 </button>
                   <button> 138 </button>
@@ -613,7 +603,7 @@ const Buttons = () => {
                 </div>
               </>
             )}
-            <button className="SP4" onClick={handleTriggerClick4}>
+            <button className="dropdown" onClick={handleTriggerClick4}>
               {" "}
               SELECT ALL 4
               <span
@@ -625,9 +615,9 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons4 && (
+            {showButtons4 && (
               <>
-                <div className="SP2-options-set1">
+                <div className="dropdown-options-set1">
                   <button> 570 </button>
                   <button> 237 </button>
                   <button> 480 </button>
@@ -635,7 +625,7 @@ const Buttons = () => {
                   <button> 390 </button>
                   <button> 147 </button>
                 </div>
-                <div className="SP2-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 679 </button>
                   <button> 345 </button>
                   <button> 138 </button>
@@ -645,7 +635,7 @@ const Buttons = () => {
                 </div>
               </>
             )}
-            <button className="SP5" onClick={handleTriggerClick5}>
+            <button className="dropdown" onClick={handleTriggerClick5}>
               {" "}
               SELECT ALL 5
               <span
@@ -657,9 +647,9 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons5 && (
+            {showButtons5 && (
               <>
-                <div className="SP2-options-set1">
+                <div className="dropdown-options-set1">
                   <button> 570 </button>
                   <button> 237 </button>
                   <button> 480 </button>
@@ -667,7 +657,7 @@ const Buttons = () => {
                   <button> 390 </button>
                   <button> 147 </button>
                 </div>
-                <div className="SP2-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 679 </button>
                   <button> 345 </button>
                   <button> 138 </button>
@@ -677,7 +667,7 @@ const Buttons = () => {
                 </div>
               </>
             )}
-            <button className="SP6" onClick={handleTriggerClick6}>
+            <button className="dropdown" onClick={handleTriggerClick6}>
               {" "}
               SELECT ALL 6
               <span
@@ -689,9 +679,9 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons6 && (
+            {showButtons6 && (
               <>
-                <div className="SP2-options-set1">
+                <div className="dropdown-options-set1">
                   <button> 570 </button>
                   <button> 237 </button>
                   <button> 480 </button>
@@ -699,7 +689,7 @@ const Buttons = () => {
                   <button> 390 </button>
                   <button> 147 </button>
                 </div>
-                <div className="SP2-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 679 </button>
                   <button> 345 </button>
                   <button> 138 </button>
@@ -709,7 +699,7 @@ const Buttons = () => {
                 </div>
               </>
             )}
-            <button className="SP7" onClick={handleTriggerClick7}>
+            <button className="dropdown" onClick={handleTriggerClick7}>
               {" "}
               SELECT ALL 7
               <span
@@ -721,9 +711,9 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons7 && (
+            {showButtons7 && (
               <>
-                <div className="SP2-options-set1">
+                <div className="dropdown-options-set1">
                   <button> 570 </button>
                   <button> 237 </button>
                   <button> 480 </button>
@@ -731,7 +721,7 @@ const Buttons = () => {
                   <button> 390 </button>
                   <button> 147 </button>
                 </div>
-                <div className="SP2-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 679 </button>
                   <button> 345 </button>
                   <button> 138 </button>
@@ -741,7 +731,7 @@ const Buttons = () => {
                 </div>
               </>
             )}
-            <button className="SP8" onClick={handleTriggerClick8}>
+            <button className="dropdown" onClick={handleTriggerClick8}>
               {" "}
               SELECT ALL 8
               <span
@@ -753,9 +743,9 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons8 && (
+            {showButtons8 && (
               <>
-                <div className="SP2-options-set1">
+                <div className="dropdown-options-set1">
                   <button> 570 </button>
                   <button> 237 </button>
                   <button> 480 </button>
@@ -763,7 +753,7 @@ const Buttons = () => {
                   <button> 390 </button>
                   <button> 147 </button>
                 </div>
-                <div className="SP2-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 679 </button>
                   <button> 345 </button>
                   <button> 138 </button>
@@ -773,7 +763,7 @@ const Buttons = () => {
                 </div>
               </>
             )}
-            <button className="SP9" onClick={handleTriggerClick9}>
+            <button className="dropdown" onClick={handleTriggerClick9}>
               {" "}
               SELECT ALL 9
               <span
@@ -785,9 +775,9 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons9 && (
+            {showButtons9 && (
               <>
-                <div className="SP2-options-set1">
+                <div className="dropdown-options-set1">
                   <button> 570 </button>
                   <button> 237 </button>
                   <button> 480 </button>
@@ -795,7 +785,7 @@ const Buttons = () => {
                   <button> 390 </button>
                   <button> 147 </button>
                 </div>
-                <div className="SP2-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 679 </button>
                   <button> 345 </button>
                   <button> 138 </button>
@@ -816,10 +806,10 @@ const Buttons = () => {
       nestedClasses: ["buttons", "Primary-btn"],
       content: (
         <>
-          <div className="new-sp-set">
-            <button className="SP-New">TP</button>
+          <div className="new-set">
+            <button className="New">TP</button>
             <button
-              className="backANK"
+              className="back-btn"
               onClick={() => {
                 handleBack();
               }}
@@ -827,8 +817,8 @@ const Buttons = () => {
               BACK
             </button>
           </div>
-          <div id="SP-btns">
-            <button className="SP1" onClick={handleTriggerClick1}>
+          <div id="dropdown-btns">
+            <button className="dropdown" onClick={handleTriggerClick1}>
               {" "}
               SELECT ALL 1{" "}
               <span
@@ -840,9 +830,9 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons1 && (
+            {showButtons1 && (
               <>
-                <div className="SP1-options-set1">
+                <div className="dropdown-options-set1">
                   <button> 137 </button>
                   <button> 146 </button>
                   <button> 236 </button>
@@ -850,7 +840,7 @@ const Buttons = () => {
                   <button> 290 </button>
                   <button> 380 </button>
                 </div>
-                <div className="SP1-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 470 </button>
                   <button> 489 </button>
                   <button> 560 </button>
@@ -860,7 +850,7 @@ const Buttons = () => {
                 </div>
               </>
             )}
-            <button className="SP2" onClick={handleTriggerClick2}>
+            <button className="dropdown" onClick={handleTriggerClick2}>
               {" "}
               SELECT ALL 2
               <span
@@ -872,9 +862,9 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons2 && (
+            {showButtons2 && (
               <>
-                <div className="SP2-options-set1">
+                <div className="dropdown-options-set1">
                   <button> 570 </button>
                   <button> 237 </button>
                   <button> 480 </button>
@@ -882,7 +872,7 @@ const Buttons = () => {
                   <button> 390 </button>
                   <button> 147 </button>
                 </div>
-                <div className="SP2-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 679 </button>
                   <button> 345 </button>
                   <button> 138 </button>
@@ -892,7 +882,7 @@ const Buttons = () => {
                 </div>
               </>
             )}
-            <button className="SP3" onClick={handleTriggerClick3}>
+            <button className="dropdown" onClick={handleTriggerClick3}>
               {" "}
               SELECT ALL 3
               <span
@@ -904,9 +894,9 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons3 && (
+            {showButtons3 && (
               <>
-                <div className="SP2-options-set1">
+                <div className="dropdown-options-set1">
                   <button> 570 </button>
                   <button> 237 </button>
                   <button> 480 </button>
@@ -914,7 +904,7 @@ const Buttons = () => {
                   <button> 390 </button>
                   <button> 147 </button>
                 </div>
-                <div className="SP2-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 679 </button>
                   <button> 345 </button>
                   <button> 138 </button>
@@ -924,7 +914,7 @@ const Buttons = () => {
                 </div>
               </>
             )}
-            <button className="SP4" onClick={handleTriggerClick4}>
+            <button className="dropdown" onClick={handleTriggerClick4}>
               {" "}
               SELECT ALL 4
               <span
@@ -936,9 +926,9 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons4 && (
+            {showButtons4 && (
               <>
-                <div className="SP2-options-set1">
+                <div className="dropdown-options-set1">
                   <button> 570 </button>
                   <button> 237 </button>
                   <button> 480 </button>
@@ -946,7 +936,7 @@ const Buttons = () => {
                   <button> 390 </button>
                   <button> 147 </button>
                 </div>
-                <div className="SP2-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 679 </button>
                   <button> 345 </button>
                   <button> 138 </button>
@@ -956,7 +946,7 @@ const Buttons = () => {
                 </div>
               </>
             )}
-            <button className="SP5" onClick={handleTriggerClick5}>
+            <button className="dropdown" onClick={handleTriggerClick5}>
               {" "}
               SELECT ALL 5
               <span
@@ -968,9 +958,9 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons5 && (
+            {showButtons5 && (
               <>
-                <div className="SP2-options-set1">
+                <div className="dropdown-options-set1">
                   <button> 570 </button>
                   <button> 237 </button>
                   <button> 480 </button>
@@ -978,7 +968,7 @@ const Buttons = () => {
                   <button> 390 </button>
                   <button> 147 </button>
                 </div>
-                <div className="SP2-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 679 </button>
                   <button> 345 </button>
                   <button> 138 </button>
@@ -988,7 +978,7 @@ const Buttons = () => {
                 </div>
               </>
             )}
-            <button className="SP6" onClick={handleTriggerClick6}>
+            <button className="dropdown" onClick={handleTriggerClick6}>
               {" "}
               SELECT ALL 6
               <span
@@ -1000,9 +990,9 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons6 && (
+            {showButtons6 && (
               <>
-                <div className="SP2-options-set1">
+                <div className="dropdown-options-set1">
                   <button> 570 </button>
                   <button> 237 </button>
                   <button> 480 </button>
@@ -1010,7 +1000,7 @@ const Buttons = () => {
                   <button> 390 </button>
                   <button> 147 </button>
                 </div>
-                <div className="SP2-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 679 </button>
                   <button> 345 </button>
                   <button> 138 </button>
@@ -1020,7 +1010,7 @@ const Buttons = () => {
                 </div>
               </>
             )}
-            <button className="SP7" onClick={handleTriggerClick7}>
+            <button className="dropdown" onClick={handleTriggerClick7}>
               {" "}
               SELECT ALL 7
               <span
@@ -1032,9 +1022,9 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons7 && (
+            {showButtons7 && (
               <>
-                <div className="SP2-options-set1">
+                <div className="dropdown-options-set1">
                   <button> 570 </button>
                   <button> 237 </button>
                   <button> 480 </button>
@@ -1042,7 +1032,7 @@ const Buttons = () => {
                   <button> 390 </button>
                   <button> 147 </button>
                 </div>
-                <div className="SP2-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 679 </button>
                   <button> 345 </button>
                   <button> 138 </button>
@@ -1052,7 +1042,7 @@ const Buttons = () => {
                 </div>
               </>
             )}
-            <button className="SP8" onClick={handleTriggerClick8}>
+            <button className="dropdown" onClick={handleTriggerClick8}>
               {" "}
               SELECT ALL 8
               <span
@@ -1064,9 +1054,9 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons8 && (
+            {showButtons8 && (
               <>
-                <div className="SP2-options-set1">
+                <div className="dropdown-options-set1">
                   <button> 570 </button>
                   <button> 237 </button>
                   <button> 480 </button>
@@ -1074,7 +1064,7 @@ const Buttons = () => {
                   <button> 390 </button>
                   <button> 147 </button>
                 </div>
-                <div className="SP2-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 679 </button>
                   <button> 345 </button>
                   <button> 138 </button>
@@ -1084,7 +1074,7 @@ const Buttons = () => {
                 </div>
               </>
             )}
-            <button className="SP9" onClick={handleTriggerClick9}>
+            <button className="dropdown" onClick={handleTriggerClick9}>
               {" "}
               SELECT ALL 9
               <span
@@ -1096,9 +1086,9 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons9 && (
+            {showButtons9 && (
               <>
-                <div className="SP2-options-set1">
+                <div className="dropdown-options-set1">
                   <button> 570 </button>
                   <button> 237 </button>
                   <button> 480 </button>
@@ -1106,7 +1096,7 @@ const Buttons = () => {
                   <button> 390 </button>
                   <button> 147 </button>
                 </div>
-                <div className="SP2-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 679 </button>
                   <button> 345 </button>
                   <button> 138 </button>
@@ -1127,10 +1117,10 @@ const Buttons = () => {
       nestedClasses: ["buttons", "Primary-btn"],
       content: (
         <>
-          <div className="new-sp-set">
-            <button className="SP-New">JODI</button>
+          <div className="new-set">
+            <button className="New">JODI</button>
             <button
-              className="backANK"
+              className="back-btn"
               onClick={() => {
                 handleBack();
               }}
@@ -1138,9 +1128,9 @@ const Buttons = () => {
               BACK
             </button>
           </div>
-          <div id="SP-btns">
-            <button className="SP1" onClick={handleTriggerClick1}>
-              {" "}
+          <div id="dropdown-btns">
+            <button className="dropdown" onClick={handleTriggerClick1}>
+              {" "}             
               SELECT ALL 1{" "}
               <span
                 className={`angle ${
@@ -1151,9 +1141,9 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons1 && (
+            {showButtons1 && (
               <>
-                <div className="SP1-options-set1">
+                <div className="dropdown-options-set1">
                   <button> 137 </button>
                   <button> 146 </button>
                   <button> 236 </button>
@@ -1161,7 +1151,7 @@ const Buttons = () => {
                   <button> 290 </button>
                   <button> 380 </button>
                 </div>
-                <div className="SP1-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 470 </button>
                   <button> 489 </button>
                   <button> 560 </button>
@@ -1171,7 +1161,7 @@ const Buttons = () => {
                 </div>
               </>
             )}
-            <button className="SP2" onClick={handleTriggerClick2}>
+            <button className="dropdown" onClick={handleTriggerClick2}>
               {" "}
               SELECT ALL 2
               <span
@@ -1183,9 +1173,9 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons2 && (
+            {showButtons2 && (
               <>
-                <div className="SP2-options-set1">
+                <div className="dropdown-options-set1">
                   <button> 570 </button>
                   <button> 237 </button>
                   <button> 480 </button>
@@ -1193,7 +1183,7 @@ const Buttons = () => {
                   <button> 390 </button>
                   <button> 147 </button>
                 </div>
-                <div className="SP2-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 679 </button>
                   <button> 345 </button>
                   <button> 138 </button>
@@ -1203,7 +1193,7 @@ const Buttons = () => {
                 </div>
               </>
             )}
-            <button className="SP3" onClick={handleTriggerClick3}>
+            <button className="dropdown" onClick={handleTriggerClick3}>
               {" "}
               SELECT ALL 3
               <span
@@ -1215,9 +1205,9 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons3 && (
+            {showButtons3 && (
               <>
-                <div className="SP2-options-set1">
+                <div className="dropdown-options-set1">
                   <button> 570 </button>
                   <button> 237 </button>
                   <button> 480 </button>
@@ -1225,7 +1215,7 @@ const Buttons = () => {
                   <button> 390 </button>
                   <button> 147 </button>
                 </div>
-                <div className="SP2-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 679 </button>
                   <button> 345 </button>
                   <button> 138 </button>
@@ -1235,7 +1225,7 @@ const Buttons = () => {
                 </div>
               </>
             )}
-            <button className="SP4" onClick={handleTriggerClick4}>
+            <button className="dropdown" onClick={handleTriggerClick4}>
               {" "}
               SELECT ALL 4
               <span
@@ -1247,9 +1237,9 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons4 && (
+            {showButtons4 && (
               <>
-                <div className="SP2-options-set1">
+                <div className="dropdown-options-set1">
                   <button> 570 </button>
                   <button> 237 </button>
                   <button> 480 </button>
@@ -1257,7 +1247,7 @@ const Buttons = () => {
                   <button> 390 </button>
                   <button> 147 </button>
                 </div>
-                <div className="SP2-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 679 </button>
                   <button> 345 </button>
                   <button> 138 </button>
@@ -1267,7 +1257,7 @@ const Buttons = () => {
                 </div>
               </>
             )}
-            <button className="SP5" onClick={handleTriggerClick5}>
+            <button className="dropdown" onClick={handleTriggerClick5}>
               {" "}
               SELECT ALL 5
               <span
@@ -1279,9 +1269,9 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons5 && (
+            {showButtons5 && (
               <>
-                <div className="SP2-options-set1">
+                <div className="dropdown-options-set1">
                   <button> 570 </button>
                   <button> 237 </button>
                   <button> 480 </button>
@@ -1289,7 +1279,7 @@ const Buttons = () => {
                   <button> 390 </button>
                   <button> 147 </button>
                 </div>
-                <div className="SP2-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 679 </button>
                   <button> 345 </button>
                   <button> 138 </button>
@@ -1299,7 +1289,7 @@ const Buttons = () => {
                 </div>
               </>
             )}
-            <button className="SP6" onClick={handleTriggerClick6}>
+            <button className="dropdown" onClick={handleTriggerClick6}>
               {" "}
               SELECT ALL 6
               <span
@@ -1311,9 +1301,9 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons6 && (
+            {showButtons6 && (
               <>
-                <div className="SP2-options-set1">
+                <div className="dropdown-options-set1">
                   <button> 570 </button>
                   <button> 237 </button>
                   <button> 480 </button>
@@ -1321,7 +1311,7 @@ const Buttons = () => {
                   <button> 390 </button>
                   <button> 147 </button>
                 </div>
-                <div className="SP2-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 679 </button>
                   <button> 345 </button>
                   <button> 138 </button>
@@ -1331,7 +1321,7 @@ const Buttons = () => {
                 </div>
               </>
             )}
-            <button className="SP7" onClick={handleTriggerClick7}>
+            <button className="dropdown" onClick={handleTriggerClick7}>
               {" "}
               SELECT ALL 7
               <span
@@ -1343,9 +1333,9 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons7 && (
+            {showButtons7 && (
               <>
-                <div className="SP2-options-set1">
+                <div className="dropdown-options-set1">
                   <button> 570 </button>
                   <button> 237 </button>
                   <button> 480 </button>
@@ -1353,7 +1343,7 @@ const Buttons = () => {
                   <button> 390 </button>
                   <button> 147 </button>
                 </div>
-                <div className="SP2-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 679 </button>
                   <button> 345 </button>
                   <button> 138 </button>
@@ -1363,7 +1353,7 @@ const Buttons = () => {
                 </div>
               </>
             )}
-            <button className="SP8" onClick={handleTriggerClick8}>
+            <button className="dropdown" onClick={handleTriggerClick8}>
               {" "}
               SELECT ALL 8
               <span
@@ -1375,9 +1365,9 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons8 && (
+            {showButtons8 && (
               <>
-                <div className="SP2-options-set1">
+                <div className="dropdown-options-set1">
                   <button> 570 </button>
                   <button> 237 </button>
                   <button> 480 </button>
@@ -1385,7 +1375,7 @@ const Buttons = () => {
                   <button> 390 </button>
                   <button> 147 </button>
                 </div>
-                <div className="SP2-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 679 </button>
                   <button> 345 </button>
                   <button> 138 </button>
@@ -1395,7 +1385,7 @@ const Buttons = () => {
                 </div>
               </>
             )}
-            <button className="SP9" onClick={handleTriggerClick9}>
+            <button className="dropdown" onClick={handleTriggerClick9}>
               {" "}
               SELECT ALL 9
               <span
@@ -1407,9 +1397,9 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons9 && (
+            {showButtons9 && (
               <>
-                <div className="SP2-options-set1">
+                <div className="dropdown-options-set1">
                   <button> 570 </button>
                   <button> 237 </button>
                   <button> 480 </button>
@@ -1417,7 +1407,7 @@ const Buttons = () => {
                   <button> 390 </button>
                   <button> 147 </button>
                 </div>
-                <div className="SP2-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 679 </button>
                   <button> 345 </button>
                   <button> 138 </button>
@@ -1438,10 +1428,10 @@ const Buttons = () => {
       nestedClasses: ["buttons", "Primary-btn"],
       content: (
         <>
-          <div className="new-sp-set">
-            <button className="SP-New">HALF SANGAM</button>
+          <div className="new-set">
+            <button className="New">HALF SANGAM</button>
             <button
-              className="backANK"
+              className="back-btn"
               onClick={() => {
                 handleBack();
               }}
@@ -1449,8 +1439,8 @@ const Buttons = () => {
               BACK
             </button>
           </div>
-          <div id="SP-btns">
-            <button className="SP1" onClick={handleTriggerClick1}>
+          <div id="dropdown-btns">
+            <button className="dropdown" onClick={handleTriggerClick1}>
               {" "}
               SELECT ALL 1{" "}
               <span
@@ -1462,9 +1452,9 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons1 && (
+            {showButtons1 && (
               <>
-                <div className="SP1-options-set1">
+                <div className="dropdown-options-set1">
                   <button> 137 </button>
                   <button> 146 </button>
                   <button> 236 </button>
@@ -1472,7 +1462,7 @@ const Buttons = () => {
                   <button> 290 </button>
                   <button> 380 </button>
                 </div>
-                <div className="SP1-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 470 </button>
                   <button> 489 </button>
                   <button> 560 </button>
@@ -1482,7 +1472,7 @@ const Buttons = () => {
                 </div>
               </>
             )}
-            <button className="SP2" onClick={handleTriggerClick2}>
+            <button className="dropdown" onClick={handleTriggerClick2}>
               {" "}
               SELECT ALL 2
               <span
@@ -1494,9 +1484,9 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons2 && (
+            {showButtons2 && (
               <>
-                <div className="SP2-options-set1">
+                <div className="dropdown-options-set1">
                   <button> 570 </button>
                   <button> 237 </button>
                   <button> 480 </button>
@@ -1504,7 +1494,7 @@ const Buttons = () => {
                   <button> 390 </button>
                   <button> 147 </button>
                 </div>
-                <div className="SP2-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 679 </button>
                   <button> 345 </button>
                   <button> 138 </button>
@@ -1514,7 +1504,7 @@ const Buttons = () => {
                 </div>
               </>
             )}
-            <button className="SP3" onClick={handleTriggerClick3}>
+            <button className="dropdown" onClick={handleTriggerClick3}>
               {" "}
               SELECT ALL 3
               <span
@@ -1526,9 +1516,9 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons3 && (
+            {showButtons3 && (
               <>
-                <div className="SP2-options-set1">
+                <div className="dropdown-options-set1">
                   <button> 570 </button>
                   <button> 237 </button>
                   <button> 480 </button>
@@ -1536,7 +1526,7 @@ const Buttons = () => {
                   <button> 390 </button>
                   <button> 147 </button>
                 </div>
-                <div className="SP2-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 679 </button>
                   <button> 345 </button>
                   <button> 138 </button>
@@ -1546,7 +1536,7 @@ const Buttons = () => {
                 </div>
               </>
             )}
-            <button className="SP4" onClick={handleTriggerClick4}>
+            <button className="dropdown" onClick={handleTriggerClick4}>
               {" "}
               SELECT ALL 4
               <span
@@ -1558,9 +1548,9 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons4 && (
+            {showButtons4 && (
               <>
-                <div className="SP2-options-set1">
+                <div className="dropdown-options-set1">
                   <button> 570 </button>
                   <button> 237 </button>
                   <button> 480 </button>
@@ -1568,7 +1558,7 @@ const Buttons = () => {
                   <button> 390 </button>
                   <button> 147 </button>
                 </div>
-                <div className="SP2-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 679 </button>
                   <button> 345 </button>
                   <button> 138 </button>
@@ -1578,7 +1568,7 @@ const Buttons = () => {
                 </div>
               </>
             )}
-            <button className="SP5" onClick={handleTriggerClick5}>
+            <button className="dropdown" onClick={handleTriggerClick5}>
               {" "}
               SELECT ALL 5
               <span
@@ -1590,9 +1580,9 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons5 && (
+            {showButtons5 && (
               <>
-                <div className="SP2-options-set1">
+                <div className="dropdown-options-set1">
                   <button> 570 </button>
                   <button> 237 </button>
                   <button> 480 </button>
@@ -1600,7 +1590,7 @@ const Buttons = () => {
                   <button> 390 </button>
                   <button> 147 </button>
                 </div>
-                <div className="SP2-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 679 </button>
                   <button> 345 </button>
                   <button> 138 </button>
@@ -1610,7 +1600,7 @@ const Buttons = () => {
                 </div>
               </>
             )}
-            <button className="SP6" onClick={handleTriggerClick6}>
+            <button className="dropdown" onClick={handleTriggerClick6}>
               {" "}
               SELECT ALL 6
               <span
@@ -1622,9 +1612,9 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons6 && (
+            {showButtons6 && (
               <>
-                <div className="SP2-options-set1">
+                <div className="dropdown-options-set1">
                   <button> 570 </button>
                   <button> 237 </button>
                   <button> 480 </button>
@@ -1632,7 +1622,7 @@ const Buttons = () => {
                   <button> 390 </button>
                   <button> 147 </button>
                 </div>
-                <div className="SP2-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 679 </button>
                   <button> 345 </button>
                   <button> 138 </button>
@@ -1642,7 +1632,7 @@ const Buttons = () => {
                 </div>
               </>
             )}
-            <button className="SP7" onClick={handleTriggerClick7}>
+            <button className="dropdown" onClick={handleTriggerClick7}>
               {" "}
               SELECT ALL 7
               <span
@@ -1654,9 +1644,9 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons7 && (
+            {showButtons7 && (
               <>
-                <div className="SP2-options-set1">
+                <div className="dropdown-options-set1">
                   <button> 570 </button>
                   <button> 237 </button>
                   <button> 480 </button>
@@ -1664,7 +1654,7 @@ const Buttons = () => {
                   <button> 390 </button>
                   <button> 147 </button>
                 </div>
-                <div className="SP2-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 679 </button>
                   <button> 345 </button>
                   <button> 138 </button>
@@ -1674,7 +1664,7 @@ const Buttons = () => {
                 </div>
               </>
             )}
-            <button className="SP8" onClick={handleTriggerClick8}>
+            <button className="dropdown" onClick={handleTriggerClick8}>
               {" "}
               SELECT ALL 8
               <span
@@ -1686,9 +1676,9 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons8 && (
+            {showButtons8 && (
               <>
-                <div className="SP2-options-set1">
+                <div className="dropdown-options-set1">
                   <button> 570 </button>
                   <button> 237 </button>
                   <button> 480 </button>
@@ -1696,7 +1686,7 @@ const Buttons = () => {
                   <button> 390 </button>
                   <button> 147 </button>
                 </div>
-                <div className="SP2-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 679 </button>
                   <button> 345 </button>
                   <button> 138 </button>
@@ -1706,7 +1696,7 @@ const Buttons = () => {
                 </div>
               </>
             )}
-            <button className="SP9" onClick={handleTriggerClick9}>
+            <button className="dropdown" onClick={handleTriggerClick9}>
               {" "}
               SELECT ALL 9
               <span
@@ -1718,9 +1708,9 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons9 && (
+            {showButtons9 && (
               <>
-                <div className="SP2-options-set1">
+                <div className="dropdown-options-set1">
                   <button> 570 </button>
                   <button> 237 </button>
                   <button> 480 </button>
@@ -1728,7 +1718,7 @@ const Buttons = () => {
                   <button> 390 </button>
                   <button> 147 </button>
                 </div>
-                <div className="SP2-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 679 </button>
                   <button> 345 </button>
                   <button> 138 </button>
@@ -1749,9 +1739,20 @@ const Buttons = () => {
       nestedClasses: ["buttons", "Primary-btn"],
       content: (
         <>
-          <div id="SP-btns">
-            <button className="SP1" onClick={handleTriggerClick1}>
-              {" "}
+          <div className="new-set">
+            <button className="New">FULL SANGAM</button>
+            <button
+              className="back-btn"
+              onClick={() => {
+                handleBack();
+              }}
+            >
+              BACK
+            </button>
+          </div>
+          <div id="dropdown-btns">
+            <button className="dropdown" onClick={handleTriggerClick1}>
+              {" "}    
               SELECT ALL 1{" "}
               <span
                 className={`angle ${
@@ -1762,9 +1763,9 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons1 && (
+            {showButtons1 && (
               <>
-                <div className="SP1-options-set1">
+                <div className="dropdown-options-set1">
                   <button> 137 </button>
                   <button> 146 </button>
                   <button> 236 </button>
@@ -1772,7 +1773,7 @@ const Buttons = () => {
                   <button> 290 </button>
                   <button> 380 </button>
                 </div>
-                <div className="SP1-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 470 </button>
                   <button> 489 </button>
                   <button> 560 </button>
@@ -1782,7 +1783,7 @@ const Buttons = () => {
                 </div>
               </>
             )}
-            <button className="SP2" onClick={handleTriggerClick2}>
+            <button className="dropdown" onClick={handleTriggerClick2}>
               {" "}
               SELECT ALL 2
               <span
@@ -1794,9 +1795,9 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons2 && (
+            {showButtons2 && (
               <>
-                <div className="SP2-options-set1">
+                <div className="dropdown-options-set1">
                   <button> 570 </button>
                   <button> 237 </button>
                   <button> 480 </button>
@@ -1804,7 +1805,7 @@ const Buttons = () => {
                   <button> 390 </button>
                   <button> 147 </button>
                 </div>
-                <div className="SP2-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 679 </button>
                   <button> 345 </button>
                   <button> 138 </button>
@@ -1814,7 +1815,7 @@ const Buttons = () => {
                 </div>
               </>
             )}
-            <button className="SP3" onClick={handleTriggerClick3}>
+            <button className="dropdown" onClick={handleTriggerClick3}>
               {" "}
               SELECT ALL 3
               <span
@@ -1826,9 +1827,9 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons3 && (
+            {showButtons3 && (
               <>
-                <div className="SP2-options-set1">
+                <div className="dropdown-options-set1">
                   <button> 570 </button>
                   <button> 237 </button>
                   <button> 480 </button>
@@ -1836,7 +1837,7 @@ const Buttons = () => {
                   <button> 390 </button>
                   <button> 147 </button>
                 </div>
-                <div className="SP2-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 679 </button>
                   <button> 345 </button>
                   <button> 138 </button>
@@ -1846,7 +1847,7 @@ const Buttons = () => {
                 </div>
               </>
             )}
-            <button className="SP4" onClick={handleTriggerClick4}>
+            <button className="dropdown" onClick={handleTriggerClick4}>
               {" "}
               SELECT ALL 4
               <span
@@ -1858,9 +1859,9 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons4 && (
+            {showButtons4 && (
               <>
-                <div className="SP2-options-set1">
+                <div className="dropdown-options-set1">
                   <button> 570 </button>
                   <button> 237 </button>
                   <button> 480 </button>
@@ -1868,7 +1869,7 @@ const Buttons = () => {
                   <button> 390 </button>
                   <button> 147 </button>
                 </div>
-                <div className="SP2-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 679 </button>
                   <button> 345 </button>
                   <button> 138 </button>
@@ -1878,7 +1879,7 @@ const Buttons = () => {
                 </div>
               </>
             )}
-            <button className="SP5" onClick={handleTriggerClick5}>
+            <button className="dropdown" onClick={handleTriggerClick5}>
               {" "}
               SELECT ALL 5
               <span
@@ -1890,9 +1891,9 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons5 && (
+            {showButtons5 && (
               <>
-                <div className="SP2-options-set1">
+                <div className="dropdown-options-set1">
                   <button> 570 </button>
                   <button> 237 </button>
                   <button> 480 </button>
@@ -1900,7 +1901,7 @@ const Buttons = () => {
                   <button> 390 </button>
                   <button> 147 </button>
                 </div>
-                <div className="SP2-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 679 </button>
                   <button> 345 </button>
                   <button> 138 </button>
@@ -1910,7 +1911,7 @@ const Buttons = () => {
                 </div>
               </>
             )}
-            <button className="SP6" onClick={handleTriggerClick6}>
+            <button className="dropdown" onClick={handleTriggerClick6}>
               {" "}
               SELECT ALL 6
               <span
@@ -1922,9 +1923,9 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons6 && (
+            {showButtons6 && (
               <>
-                <div className="SP2-options-set1">
+                <div className="dropdown-options-set1">
                   <button> 570 </button>
                   <button> 237 </button>
                   <button> 480 </button>
@@ -1932,7 +1933,7 @@ const Buttons = () => {
                   <button> 390 </button>
                   <button> 147 </button>
                 </div>
-                <div className="SP2-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 679 </button>
                   <button> 345 </button>
                   <button> 138 </button>
@@ -1942,7 +1943,7 @@ const Buttons = () => {
                 </div>
               </>
             )}
-            <button className="SP7" onClick={handleTriggerClick7}>
+            <button className="dropdown" onClick={handleTriggerClick7}>
               {" "}
               SELECT ALL 7
               <span
@@ -1954,9 +1955,9 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons7 && (
+            {showButtons7 && (
               <>
-                <div className="SP2-options-set1">
+                <div className="dropdown-options-set1">
                   <button> 570 </button>
                   <button> 237 </button>
                   <button> 480 </button>
@@ -1964,7 +1965,7 @@ const Buttons = () => {
                   <button> 390 </button>
                   <button> 147 </button>
                 </div>
-                <div className="SP2-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 679 </button>
                   <button> 345 </button>
                   <button> 138 </button>
@@ -1974,7 +1975,7 @@ const Buttons = () => {
                 </div>
               </>
             )}
-            <button className="SP8" onClick={handleTriggerClick8}>
+            <button className="dropdown" onClick={handleTriggerClick8}>
               {" "}
               SELECT ALL 8
               <span
@@ -1986,9 +1987,9 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons8 && (
+            {showButtons8 && (
               <>
-                <div className="SP2-options-set1">
+                <div className="dropdown-options-set1">
                   <button> 570 </button>
                   <button> 237 </button>
                   <button> 480 </button>
@@ -1996,7 +1997,7 @@ const Buttons = () => {
                   <button> 390 </button>
                   <button> 147 </button>
                 </div>
-                <div className="SP2-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 679 </button>
                   <button> 345 </button>
                   <button> 138 </button>
@@ -2006,7 +2007,7 @@ const Buttons = () => {
                 </div>
               </>
             )}
-            <button className="SP9" onClick={handleTriggerClick9}>
+            <button className="dropdown" onClick={handleTriggerClick9}>
               {" "}
               SELECT ALL 9
               <span
@@ -2018,9 +2019,9 @@ const Buttons = () => {
                 ^{" "}
               </span>{" "}
             </button>
-            {showSPButtons9 && (
+            {showButtons9 && (
               <>
-                <div className="SP2-options-set1">
+                <div className="dropdown-options-set1">
                   <button> 570 </button>
                   <button> 237 </button>
                   <button> 480 </button>
@@ -2028,7 +2029,7 @@ const Buttons = () => {
                   <button> 390 </button>
                   <button> 147 </button>
                 </div>
-                <div className="SP2-options-set2">
+                <div className="dropdown-options-set2">
                   <button> 679 </button>
                   <button> 345 </button>
                   <button> 138 </button>
@@ -2039,12 +2040,13 @@ const Buttons = () => {
               </>
             )}
           </div>
+          <br></br>
         </>
       ),
     },
   ];
   return (
-    <div className="container">
+    <div className="container-buttons">
       <div className="new-buttons">
         {activeButton ? (
           <ButtonContent
