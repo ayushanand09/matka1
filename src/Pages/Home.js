@@ -12,7 +12,7 @@ const Home = () => {
       <Cards />
       <BetTokens />
       <BetButtons/>
-      {/* <NewBetButtons/> */}
+      <NewBetButtons/>
     </div>
   );
 };
