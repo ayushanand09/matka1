@@ -22,8 +22,6 @@
   height: 100%;
   background-color: rgb(220, 192, 5);
   animation-name: progress;
-
-  /*Changed*/
   animation-delay: 15s;
   animation-duration: 40s;
   animation-timing-function: linear;
@@ -50,7 +48,7 @@
   font-weight: bolder;
   background-color: rgba(0, 0, 0, 0.605);
   border-radius: 20px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   animation: blink 1s infinite;
 }
 
@@ -71,9 +69,6 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  position: absolute;
-  top: 50%;
-  left:40%;
 }
 
 .bet-add-drop {
@@ -102,8 +97,7 @@
   width: 6.5rem;
   height: 2rem;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
   margin: 1rem;
   background-color: black;
   color: white;
