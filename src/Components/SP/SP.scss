@@ -45,6 +45,7 @@
         align-items: center; 
         button{
             margin-left: 4rem;
+            background-color: yellow;
         }
     }
     .options-set2{
@@ -57,12 +58,13 @@
         align-items: center;  
         button{
             margin-left: 4rem;
+            background-color: yellow;
         }  
     }
     
     button{
         margin: 0.5rem 0.5rem;
-        background-color: yellow;
+        // background-color: yellow;
         border-radius: 0.5rem;
         height: 2rem;
         width: 5rem;

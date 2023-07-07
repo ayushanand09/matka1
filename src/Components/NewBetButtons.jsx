@@ -47,7 +47,7 @@ const NewBetButtons = () => {
             <div className="ANK-1">
               <button className="btn btn-danger">ANK</button>
               <button className="btn btn-warning" value={1}>1</button>
-              <button className="btn btn-warning"value={2}>2</button>
+              <button className="btn btn-warning" value={2}>2</button>
               <button className="btn btn-warning" value={3}>3</button>
               <button className="btn btn-warning" value={4}>4</button>
               <button className="btn btn-warning" value={5}>5</button>
