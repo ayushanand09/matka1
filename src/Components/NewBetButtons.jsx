@@ -19,7 +19,7 @@ const NewBetButtons = () => {
         </div>
       </div>
     </div>
-  );l
+  );
 };
 
 export default NewBetButtons;
