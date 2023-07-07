@@ -1,9 +1,9 @@
 import "./App.css";
-import BetButtons from "./Components/BetButtons";
-import Buttons from "./Components/Buttons";
-import Cards from "./Components/Cards";
+// import BetButtons from "./Components/BetButtons";
+// import Buttons from "./Components/Buttons";
+// import Cards from "./Components/Cards";
 import Home from "./Pages/Home";
-import Tokens from "./Components/Tokens";
+// import Tokens from "./Components/Tokens";
 
 const App = () => {
   return (
