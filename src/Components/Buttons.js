@@ -5,15 +5,6 @@ const ButtonContent = ({ content, onBack, id }) => {
   return (
     <div>
       <div>{content}</div>
-      {/* {id == 1 ? (
-          ""
-        ) 
-        : (
-          <button className="backANK" onClick={onBack}>
-            BACK
-          </button>
-        )
-        } */}
     </div>
   );
 };
