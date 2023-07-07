@@ -24,6 +24,8 @@ const BetTokens = () => {
       setdisplayToken(false);
     }, 55000);
 
+
+
     return () => {
       clearTimeout(showTimeout);
       clearTimeout(hideTimeout);
@@ -31,9 +33,9 @@ const BetTokens = () => {
   }, []);
   return (
     <>
+      <div className="token_container">
     {
-      displayToken && (
-        <div className="token_container">
+          displayToken && (
         <div className="container main_tokens d-flex justify-content-center align-item-center">
           <button onClick={onBetClick} data-value={1}>
             <img src={Chip1} alt="chip" />
@@ -56,10 +58,10 @@ const BetTokens = () => {
           <button data-value={250} onClick={onBetClick}>
             <img src={Chip250} alt="chip" />
           </button>
-        </div>
-      </div>
+        </div>        
       )
     }
+    </div>
     </>
   );
 }

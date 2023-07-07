@@ -4,7 +4,7 @@ import Cards from "../Components/Cards";
 import BetTokens from "../Components/BetTokens";
 import BetButtons from "../Components/BetButtons";
 import ClockTimer from "../Components/ClockTimer";
-// import NewBetButtons from "../Components/NewBetButtons";
+import NewBetButtons from "../Components/NewBetButtons";
 
 const Home = () => {
   return (
