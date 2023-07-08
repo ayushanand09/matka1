@@ -216,7 +216,7 @@ const FULLSANGAMbuttons = () => {
 
   return (
     <>
-      <button className="btn btn-danger">FULL SANGAM</button>
+      <button className="btn btn-danger">Full Sangam</button>
       <div className="sp-button-content">
         <button value={1} onClick={() => handleSelectClick(1)}>
           <span className="sp-txt"> SELECT ALL 1 </span>

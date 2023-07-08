@@ -118,19 +118,19 @@ const NewBetButtons = () => {
               className="btn btn-danger"
               onClick={() => handleButtonClick("HALF SANGAM")}
             >
-              HALF SANGAM
+              Half Sangam
             </button>
             <button
               className="btn btn-danger"
               onClick={() => handleButtonClick("FULL SANGAM")}
             >
-              FULL SANGAM
+              Full Sangam
             </button>
             <button
               className="btn btn-danger"
               onClick={() => handleButtonClick("CYCLE PATTI")}
             >
-              CYCLE PATTI
+              Cycle Patti
             </button>
           </div>
         </div>
@@ -138,7 +138,7 @@ const NewBetButtons = () => {
         <div className="content">
             {selectedButton === "ANK" ? "" :
           <button className="btn btn-primary" onClick={handleBackButtonClick}>
-            Back
+            BACK
           </button>
           }
           {renderContent()}

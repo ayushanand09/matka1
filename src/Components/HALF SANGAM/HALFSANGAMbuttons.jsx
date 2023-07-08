@@ -216,7 +216,7 @@ const HALFSANGAMbuttons = () => {
 
   return (
     <>
-      <button className="btn btn-danger">HALF SANGAM</button>
+      <button className="btn btn-danger">Half Sangam</button>
       <div className="sp-button-content">
         <button value={1} onClick={() => handleSelectClick(1)}>
           <span className="sp-txt"> SELECT ALL 1 </span>
