@@ -1,32 +1,12 @@
-// import React from "react";
-// import "../Css/NewBetButtons.scss";
-
-// const NewBetButtons = () => {
-//   return (
-//     <div className="container bet-buttons">
-//       <div className="main-buttons">
-//         <div>
-//           <button className="btn btn-danger">ANK</button>
-//           <button className="btn btn-danger">SP</button>
-//           <button className="btn btn-danger">DP</button>
-//           <button className="btn btn-danger">TP</button>
-//           <button className="btn btn-danger">JODI</button>
-//         </div>
-//         <div>
-//           <button className="btn btn-danger">Half Sangam</button>
-//           <button className="btn btn-danger">Full Sangam</button>
-//           <button className="btn btn-danger">Cycle Patti</button>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default NewBetButtons;
-
 import React, { useState } from "react";
 import "../Css/NewBetButtons.scss";
 import SPbuttons from "./SP/SPbuttons";
+import DPbuttons from "./DP/DPbuttons";
+import TPbuttons from "./TP/TPbuttons";
+import JODIbuttons from "./JODI/JODIbuttons";
+import HALFSANGAMbuttons from "./HALF SANGAM/HALFSANGAMbuttons";
+import FULLSANGAMbuttons from "./FULL SANGAM/FULLSANGAMbuttons";
+import CYCLEPATTIbuttons from "./CYCLE PATTI/CYCLEPATTI";
 
 const NewBetButtons = () => {
   const [selectedButton, setSelectedButton] = useState("");
@@ -70,45 +50,27 @@ const NewBetButtons = () => {
         );
       case "DP":
         return (
-          <div>
-            <h2>Content for DP</h2>
-            {/* Add specific content for DP button */}
-          </div>
+          <DPbuttons />
         );
       case "TP":
         return (
-          <div>
-            <h2>Content for TP</h2>
-            {/* Add specific content for TP button */}
-          </div>
+            <TPbuttons />
         );
       case "JODI":
         return (
-          <div>
-            <h2>Content for JODI</h2>
-            {/* Add specific content for JODI button */}
-          </div>
+          <JODIbuttons />
         );
-      case "Half Sangam":
+      case "HALF SANGAM":
         return (
-          <div>
-            <h2>Content for Half Sangam</h2>
-            {/* Add specific content for Half Sangam button */}
-          </div>
+          <HALFSANGAMbuttons />
         );
-      case "Full Sangam":
+      case "FULL SANGAM":
         return (
-          <div>
-            <h2>Content for Full Sangam</h2>
-            {/* Add specific content for Full Sangam button */}
-          </div>
+          <FULLSANGAMbuttons />
         );
-      case "Cycle Patti":
+      case "CYCLE PATTI":
         return (
-          <div>
-            <h2>Content for Cycle Patti</h2>
-            {/* Add specific content for Cycle Patti button */}
-          </div>
+          <CYCLEPATTIbuttons />
         );
       default:
         return null;
@@ -154,32 +116,32 @@ const NewBetButtons = () => {
           <div>
             <button
               className="btn btn-danger"
-              onClick={() => handleButtonClick("Half Sangam")}
+              onClick={() => handleButtonClick("HALF SANGAM")}
             >
-              Half Sangam
+              HALF SANGAM
             </button>
             <button
               className="btn btn-danger"
-              onClick={() => handleButtonClick("Full Sangam")}
+              onClick={() => handleButtonClick("FULL SANGAM")}
             >
-              Full Sangam
+              FULL SANGAM
             </button>
             <button
               className="btn btn-danger"
-              onClick={() => handleButtonClick("Cycle Patti")}
+              onClick={() => handleButtonClick("CYCLE PATTI")}
             >
-              Cycle Patti
+              CYCLE PATTI
             </button>
           </div>
         </div>
       ) : (
         <div className="content">
-          {renderContent()}
             {selectedButton === "ANK" ? "" :
           <button className="btn btn-primary" onClick={handleBackButtonClick}>
             Back
           </button>
           }
+          {renderContent()}
         </div>
       )}
     </div>
