@@ -138,7 +138,7 @@ const NewBetButtons = () => {
         <div className="content">
             {selectedButton === "ANK" ? "" :
           <button className="btn btn-primary" onClick={handleBackButtonClick}>
-            BACK
+            Back
           </button>
           }
           {renderContent()}
