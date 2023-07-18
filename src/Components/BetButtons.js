@@ -7,7 +7,9 @@ const BetButtons = () => {
   const [currentText, setCurrentText] = useState("");
   const animation = useState(false);
 
-  const [timer, setTimer] = useState(0);
+  const [event, setEvent] = useState(1);
+
+  // const [timer, setTimer] = useState(0);
 
   useEffect(() => {
     const showTimeout = setTimeout(() => {
@@ -24,50 +26,89 @@ const BetButtons = () => {
     };
   }, []);
 
-  // UPAR KARDIYA 
-  // const texts = [
-  //   { id: "txt", text: "Cards Shuffling", duration: 15000 }, //Shuffling time: approx 27s
-  //   { id: "txt", text: "Place your bets", duration: 40000 }, //Betting time: approx1min:20s
-  //   { id: "txt", text: "Wait for the result", duration: 15000 }, //Result Declaration time: approx 30s
-  // ];
-  // const interval = setInterval(() => {
-  //   setTimer((prevTimer) => prevTimer + 1000);
-  // }, 15000);
+  // useEffect(() => {
+  //   const texts = [
+  //     { id: "txt", text: "Cards Shuffling", duration: 15000 }, //Shuffling time: approx 27s
+  //     { id: "txt", text: "Place your bets", duration: 40000 }, //Betting time: approx1min:20s
+  //     { id: "txt", text: "Wait for the result", duration: 15000 }, //Result Declaration time: approx 30s
+  //   ];
+  
+  //   const interval = setInterval(() => {
+  //     setTimer((prevTimer) => prevTimer + 1000);
+  //   }, 1000);
+  //   console.log("jo")
+  //   const totalDuration = texts.reduce((acc, text) => acc + text.duration, 0);
+  
+  //   if (timer >= totalDuration) {
+  //     clearInterval(interval);
+  //     window.location.reload();
+  //     return;
+  //   }
+  
+  //   for (let i = 0; i < texts.length; i++) {
+  //     const { duration, text } = texts[i];
+  //     const textStartTime = texts.slice(0, i).reduce((acc, t) => acc + t.duration, 0);
+  //     const textEndTime = textStartTime + duration;
+  
+  //     if (timer >= textStartTime && timer < textEndTime) {
+  //       setCurrentText(text);
+  //       break;
+  //     }
+  //   }
+  
+  //   return () => {
+  //     clearInterval(interval);
+  //   };
+  // }, [timer]);
 
   useEffect(() => {
-    const texts = [
-      { id: "txt", text: "Cards Shuffling", duration: 15000 }, //Shuffling time: approx 27s
-      { id: "txt", text: "Place your bets", duration: 40000 }, //Betting time: approx1min:20s
-      { id: "txt", text: "Wait for the result", duration: 15000 }, //Result Declaration time: approx 30s
-    ];
-  
-    const interval = setInterval(() => {
-      setTimer((prevTimer) => prevTimer + 1000);
-    }, 1000);
-    console.log("jo")
-    const totalDuration = texts.reduce((acc, text) => acc + text.duration, 0);
-  
-    if (timer >= totalDuration) {
-      clearInterval(interval);
-      window.location.reload();
-      return;
+    if(event === 1){
+      setCurrentText("Cards Shuffling");
+      setTimeout(()=>{
+        setEvent(2)
+      },15000)
+    }else if(event === 2){
+      setCurrentText("Place your bets");
+      setTimeout(()=>{
+        setEvent(3)
+      },40000)
+    }else{
+      setCurrentText("Wait for the result");
+      setTimeout(()=>{
+        setEvent(1)
+      },15000)
     }
-  
-    for (let i = 0; i < texts.length; i++) {
-      const { duration, text } = texts[i];
-      const textStartTime = texts.slice(0, i).reduce((acc, t) => acc + t.duration, 0);
-      const textEndTime = textStartTime + duration;
-  
-      if (timer >= textStartTime && timer < textEndTime) {
-        setCurrentText(text);
-        break;
-      }
-    }
-  
-    return () => {
-      clearInterval(interval);
-    };
-  }, [timer]);
+  }, [event]);
+
+
+  // initially
+
+  // useEffect(()=>{
+   
+  // },[])
+
+
+  // exit
+
+  // useEffect(()=>()=>{
+
+  // },[])
+
+  // for specific state
+
+  // useEffect(()=>{
+   
+  // },[eventevent])
+
+
+
+  // const getResults = () =>{
+
+
+  //   console.log('results listening')
+
+
+  // }
   
   return (
     <>
