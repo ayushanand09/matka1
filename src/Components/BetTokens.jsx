@@ -8,11 +8,24 @@ import Chip50 from '../Assets/Chips/chip_50.png'
 import Chip100 from '../Assets/Chips/chip_100.png'
 import Chip250 from '../Assets/Chips/chip_250.png'
 
-const BetTokens = () => {
+const BetTokens = (props) => {
+  const [arr, setArr] = useState([]);
+
+
   const onBetClick = (e) => {
     e.preventDefault();
-    console.log(e.currentTarget.getAttribute("data-value"));
+    setArr([...arr, e.currentTarget.getAttribute("data-value")]);
+    // console.log(e.currentTarget.getAttribute("data-value"));
   }
+
+  useEffect(() => {
+    if (arr.length !== 0) {
+      // console.log(arr);
+      props.objects.betAmount = arr;
+      console.log(props.objects);
+    }
+  }, [arr]);
+
   const [displayToken, setdisplayToken] = useState(false);
 
   useEffect(() => {

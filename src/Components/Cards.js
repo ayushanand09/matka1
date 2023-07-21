@@ -17,24 +17,24 @@ const Cards = () => {
         <div className="cards_hero_div">
           <div className="main_cards">
             {firstFilter.map((item) => (
-              <img src={item.image} alt="card" />
+              <img src={item.image} alt="card" key={item.code} />
             ))}
             {secondFilter.map((item) => (
-              <img src={item.image} alt="card" />
+              <img src={item.image} alt="card" key={item.code} />
             ))}
             {thirdFilter.map((item) => (
-              <img src={item.image} alt="card" />
+              <img src={item.image} alt="card" key={item.code} />
             ))}
           </div>
           <div className="cards_value">
             {firstFilter.map((item) => (
-              <span>{item.value}</span>
+              <span key={item.code}>{item.value}</span>
             ))}
             {secondFilter.map((item) => (
-              <span>{item.value}</span>
+              <span key={item.code}>{item.value}</span>
             ))}
             {thirdFilter.map((item) => (
-              <span>{item.value}</span>
+              <span key={item.code}>{item.value}</span>
             ))}
           </div>
           <div className="cards_final_value"> - {total_value}</div>
