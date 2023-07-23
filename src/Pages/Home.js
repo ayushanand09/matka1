@@ -8,7 +8,6 @@ import NewBetButtons from "../Components/NewBetButtons";
 // import { io } from "socket.io-client";
 import axios from "axios";
 
-
 const Home = () => {
   const [parentVariable, setParentVariable] = useState(false);
   // useEffect(() => {
@@ -29,7 +28,6 @@ const Home = () => {
   //   };
   // }, []);
 
-
   const [objects, setObject] = useState({
     userId: "64b57c4ccbf349ceabb25522",
     betType: "",
@@ -40,7 +38,7 @@ const Home = () => {
 
   const makeRequest = async (payload) => {
     try {
-      const url = 'https://api.matkaking.fun/api/bet';
+      const url = "https://api.matkaking.fun/api/bet";
         const response = await axios.post(url, payload);
         console.log("Response:", response.data);
     } catch (error) {
@@ -48,13 +46,14 @@ const Home = () => {
       
     }
   }
+  // const serializedPayload = customStringify(payload);
   
   useEffect(() => {
     var payLoad = JSON.parse(localStorage.getItem('payLoad'));
     if (payLoad)
     { // console.log(payLoad.betType);
       makeRequest(payLoad);
-      localStorage.clear();  
+      // localStorage.clear();  
     }
   }, [parentVariable]);
 
