@@ -14,7 +14,7 @@ const BetTokens = (props) => {
 
   const onBetClick = (e) => {
     e.preventDefault();
-    setArr([...arr, e.currentTarget.getAttribute("data-value")]);
+    setArr([...arr, Number(e.currentTarget.getAttribute("data-value"))]);
     // console.log(e.currentTarget.getAttribute("data-value"));
   }
 

@@ -22,9 +22,8 @@ const NewBetButtons = ({objects,parentVariable,onChildVariableChange}) => {
 
   const ankButtonValue = (e) => {
     // console.log(e.target.value);
-    setBetArr([...betArr, e.target.value]);
+    setBetArr([...betArr, Number(e.target.value)]);
   }
-
 
   useEffect(() => {
     if (selectedButton !== "") {
@@ -41,7 +40,7 @@ const NewBetButtons = ({objects,parentVariable,onChildVariableChange}) => {
       // localStorage.setItem("payLoad", JSON.stringify(props.objects));
       localStorage.setItem("payLoad", JSON.stringify(objects));
       // parentVariable = !parentVariable;
-       onChildVariableChange(!parentVariable);
+      onChildVariableChange(!parentVariable);
     }
   }, [betArr]);
 
