@@ -40,7 +40,7 @@ const Home = () => {
 
   const makeRequest = async (payload) => {
     try {
-      const url = 'http://103.133.214.122:3000/api/bet';
+      const url = "https://api.matkaking.fun/api/bet";
         const response = await axios.post(url, payload);
         console.log("Response:", response.data);
     } catch (error) {
