@@ -8,6 +8,8 @@ import HALFSANGAMbuttons from "./HALF SANGAM/HALFSANGAMbuttons";
 import FULLSANGAMbuttons from "./FULL SANGAM/FULLSANGAMbuttons";
 import CYCLEPATTIbuttons from "./CYCLE PATTI/CYCLEPATTI";
 
+
+
 const NewBetButtons = ({objects,parentVariable,onChildVariableChange}) => {
   const [selectedButton, setSelectedButton] = useState("");
   const [betArr, setBetArr] = useState([]);
@@ -35,11 +37,9 @@ const NewBetButtons = ({objects,parentVariable,onChildVariableChange}) => {
 
   useEffect(() => {
     if (betArr.length !== 0) {
-      // props.objects.selectedNumbers = betArr;
       objects.selectedNumbers = betArr;
       // localStorage.setItem("payLoad", JSON.stringify(props.objects));
       localStorage.setItem("payLoad", JSON.stringify(objects));
-      // parentVariable = !parentVariable;
       onChildVariableChange(!parentVariable);
     }
   }, [betArr]);
@@ -72,31 +72,31 @@ const NewBetButtons = ({objects,parentVariable,onChildVariableChange}) => {
         );
       case "SP":
         return (
-          <SPbuttons/>
+          <SPbuttons objects={objects} parentVariable={ parentVariable} onChildVariableChange={onChildVariableChange} />
         );
       case "DP":
         return (
-          <DPbuttons />
+          <DPbuttons objects={objects} parentVariable={ parentVariable} onChildVariableChange={onChildVariableChange}/>
         );
       case "TP":
         return (
-            <TPbuttons />
+            <TPbuttons objects={objects} parentVariable={ parentVariable} onChildVariableChange={onChildVariableChange}/>
         );
       case "JODI":
         return (
-          <JODIbuttons />
+          <JODIbuttons objects={objects} parentVariable={ parentVariable} onChildVariableChange={onChildVariableChange}/>
         );
       case "HALF SANGAM":
         return (
-          <HALFSANGAMbuttons />
+          <HALFSANGAMbuttons objects={objects} parentVariable={ parentVariable} onChildVariableChange={onChildVariableChange}/>
         );
       case "FULL SANGAM":
         return (
-          <FULLSANGAMbuttons />
+          <FULLSANGAMbuttons objects={objects} parentVariable={ parentVariable} onChildVariableChange={onChildVariableChange}/>
         );
       case "CYCLE PATTI":
         return (
-          <CYCLEPATTIbuttons />
+          <CYCLEPATTIbuttons objects={objects} parentVariable={ parentVariable} onChildVariableChange={onChildVariableChange}/>
         );
       default:
         return null;

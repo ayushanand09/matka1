@@ -1,41 +1,54 @@
 import React, { useState } from "react";
 import "../SP/SP.scss"
 
-const FULLSANGAMbuttons = () => {
-  const [selectSP, setSelectSP] = useState(null);
+const FULLSANGAMbuttons = ({objects,parentVariable,onChildVariableChange}) => {
+  const [selectFull, setselectFull] = useState(null);
   const [isAnimated, setIsAnimated] = useState(false);
+  const [betArr, setBetArr] = useState([]);
 
   const handleSelectClick = (buttonId) => {
-    if (selectSP === buttonId) {
-      setSelectSP(null);
+    if (selectFull === buttonId) {
+      setselectFull(null);
       setIsAnimated(false);
     } else {
-      setSelectSP(buttonId);
+      setselectFull(buttonId);
       setIsAnimated(true);
     }
   };
 
+  const fullButtonClick = (e) => {
+    setBetArr([...betArr, Number(e.target.value)]);
+  }
+
+  React.useEffect(() => {
+    if (betArr.length !== 0) {
+      objects.selectedNumbers = betArr;
+      localStorage.setItem("payLoad", JSON.stringify(objects));
+      onChildVariableChange(!parentVariable);
+    }
+  }, [betArr]);
+
   const renderContent = () => {
-    if (selectSP !== null) {
-      switch (selectSP) {
+    if (selectFull !== null) {
+      switch (selectFull) {
         case 1:
           return (
             <div className="buttons1">
               <div className="options-set1">
-                  <button> 137 </button>
-                  <button> 146 </button>
-                  <button> 236 </button>
-                  <button> 245 </button>
-                  <button> 290 </button>
-                  <button> 380 </button>
+                  <button value={570} onClick={fullButtonClick}> 570 </button>
+                  <button value={237} onClick={fullButtonClick}> 237 </button>
+                  <button value={480} onClick={fullButtonClick}> 480 </button>
+                  <button value={156} onClick={fullButtonClick}> 156 </button>
+                  <button value={390} onClick={fullButtonClick}> 390 </button>
+                  <button value={147} onClick={fullButtonClick}> 147 </button>
                 </div>
                 <div className="options-set2">
-                  <button> 470 </button>
-                  <button> 489 </button>
-                  <button> 560 </button>
-                  <button> 579 </button>
-                  <button> 678 </button>
-                  <button> 128 </button>
+                  <button value={679} onClick={fullButtonClick}> 679 </button>
+                  <button value={345} onClick={fullButtonClick}> 345 </button>
+                  <button value={138} onClick={fullButtonClick}> 138 </button>
+                  <button value={589} onClick={fullButtonClick}> 589 </button>
+                  <button value={246} onClick={fullButtonClick}> 246 </button>
+                  <button value={129} onClick={fullButtonClick}> 129 </button>
                 </div>
             </div>
           );
@@ -43,20 +56,20 @@ const FULLSANGAMbuttons = () => {
           return (
             <div className="buttons1">
               <div className="options-set1">
-                  <button> 570 </button>
-                  <button> 237 </button>
-                  <button> 480 </button>
-                  <button> 156 </button>
-                  <button> 390 </button>
-                  <button> 147 </button>
+                  <button value={570} onClick={fullButtonClick}> 570 </button>
+                  <button value={237} onClick={fullButtonClick}> 237 </button>
+                  <button value={480} onClick={fullButtonClick}> 480 </button>
+                  <button value={156} onClick={fullButtonClick}> 156 </button>
+                  <button value={390} onClick={fullButtonClick}> 390 </button>
+                  <button value={147} onClick={fullButtonClick}> 147 </button>
                 </div>
                 <div className="options-set2">
-                  <button> 679 </button>
-                  <button> 345 </button>
-                  <button> 138 </button>
-                  <button> 589 </button>
-                  <button> 246 </button>
-                  <button> 129 </button>
+                  <button value={679} onClick={fullButtonClick}> 679 </button>
+                  <button value={345} onClick={fullButtonClick}> 345 </button>
+                  <button value={138} onClick={fullButtonClick}> 138 </button>
+                  <button value={589} onClick={fullButtonClick}> 589 </button>
+                  <button value={246} onClick={fullButtonClick}> 246 </button>
+                  <button value={129} onClick={fullButtonClick}> 129 </button>
                 </div>
             </div>
           );
@@ -64,20 +77,20 @@ const FULLSANGAMbuttons = () => {
           return (
             <div className="buttons1">
               <div className="options-set1">
-                  <button> 570 </button>
-                  <button> 237 </button>
-                  <button> 480 </button>
-                  <button> 156 </button>
-                  <button> 390 </button>
-                  <button> 147 </button>
+                  <button value={570} onClick={fullButtonClick}> 570 </button>
+                  <button value={237} onClick={fullButtonClick}> 237 </button>
+                  <button value={480} onClick={fullButtonClick}> 480 </button>
+                  <button value={156} onClick={fullButtonClick}> 156 </button>
+                  <button value={390} onClick={fullButtonClick}> 390 </button>
+                  <button value={147} onClick={fullButtonClick}> 147 </button>
                 </div>
                 <div className="options-set2">
-                  <button> 679 </button>
-                  <button> 345 </button>
-                  <button> 138 </button>
-                  <button> 589 </button>
-                  <button> 246 </button>
-                  <button> 129 </button>
+                  <button value={679} onClick={fullButtonClick}> 679 </button>
+                  <button value={345} onClick={fullButtonClick}> 345 </button>
+                  <button value={138} onClick={fullButtonClick}> 138 </button>
+                  <button value={589} onClick={fullButtonClick}> 589 </button>
+                  <button value={246} onClick={fullButtonClick}> 246 </button>
+                  <button value={129} onClick={fullButtonClick}> 129 </button>
                 </div>
             </div>
           );
@@ -85,20 +98,20 @@ const FULLSANGAMbuttons = () => {
           return (
             <div className="buttons1">
               <div className="options-set1">
-                  <button> 570 </button>
-                  <button> 237 </button>
-                  <button> 480 </button>
-                  <button> 156 </button>
-                  <button> 390 </button>
-                  <button> 147 </button>
+                  <button value={570} onClick={fullButtonClick}> 570 </button>
+                  <button value={237} onClick={fullButtonClick}> 237 </button>
+                  <button value={480} onClick={fullButtonClick}> 480 </button>
+                  <button value={156} onClick={fullButtonClick}> 156 </button>
+                  <button value={390} onClick={fullButtonClick}> 390 </button>
+                  <button value={147} onClick={fullButtonClick}> 147 </button>
                 </div>
                 <div className="options-set2">
-                  <button> 679 </button>
-                  <button> 345 </button>
-                  <button> 138 </button>
-                  <button> 589 </button>
-                  <button> 246 </button>
-                  <button> 129 </button>
+                  <button value={679} onClick={fullButtonClick}> 679 </button>
+                  <button value={345} onClick={fullButtonClick}> 345 </button>
+                  <button value={138} onClick={fullButtonClick}> 138 </button>
+                  <button value={589} onClick={fullButtonClick}> 589 </button>
+                  <button value={246} onClick={fullButtonClick}> 246 </button>
+                  <button value={129} onClick={fullButtonClick}> 129 </button>
                 </div>
             </div>
           );
@@ -106,20 +119,20 @@ const FULLSANGAMbuttons = () => {
           return (
             <div className="buttons1">
               <div className="options-set1">
-                  <button> 570 </button>
-                  <button> 237 </button>
-                  <button> 480 </button>
-                  <button> 156 </button>
-                  <button> 390 </button>
-                  <button> 147 </button>
+                  <button value={570} onClick={fullButtonClick}> 570 </button>
+                  <button value={237} onClick={fullButtonClick}> 237 </button>
+                  <button value={480} onClick={fullButtonClick}> 480 </button>
+                  <button value={156} onClick={fullButtonClick}> 156 </button>
+                  <button value={390} onClick={fullButtonClick}> 390 </button>
+                  <button value={147} onClick={fullButtonClick}> 147 </button>
                 </div>
                 <div className="options-set2">
-                  <button> 679 </button>
-                  <button> 345 </button>
-                  <button> 138 </button>
-                  <button> 589 </button>
-                  <button> 246 </button>
-                  <button> 129 </button>
+                  <button value={679} onClick={fullButtonClick}> 679 </button>
+                  <button value={345} onClick={fullButtonClick}> 345 </button>
+                  <button value={138} onClick={fullButtonClick}> 138 </button>
+                  <button value={589} onClick={fullButtonClick}> 589 </button>
+                  <button value={246} onClick={fullButtonClick}> 246 </button>
+                  <button value={129} onClick={fullButtonClick}> 129 </button>
                 </div>
             </div>
           );
@@ -127,20 +140,20 @@ const FULLSANGAMbuttons = () => {
           return (
             <div className="buttons1">
               <div className="options-set1">
-                  <button> 570 </button>
-                  <button> 237 </button>
-                  <button> 480 </button>
-                  <button> 156 </button>
-                  <button> 390 </button>
-                  <button> 147 </button>
+                  <button value={570} onClick={fullButtonClick}> 570 </button>
+                  <button value={237} onClick={fullButtonClick}> 237 </button>
+                  <button value={480} onClick={fullButtonClick}> 480 </button>
+                  <button value={156} onClick={fullButtonClick}> 156 </button>
+                  <button value={390} onClick={fullButtonClick}> 390 </button>
+                  <button value={147} onClick={fullButtonClick}> 147 </button>
                 </div>
                 <div className="options-set2">
-                  <button> 679 </button>
-                  <button> 345 </button>
-                  <button> 138 </button>
-                  <button> 589 </button>
-                  <button> 246 </button>
-                  <button> 129 </button>
+                  <button value={679} onClick={fullButtonClick}> 679 </button>
+                  <button value={345} onClick={fullButtonClick}> 345 </button>
+                  <button value={138} onClick={fullButtonClick}> 138 </button>
+                  <button value={589} onClick={fullButtonClick}> 589 </button>
+                  <button value={246} onClick={fullButtonClick}> 246 </button>
+                  <button value={129} onClick={fullButtonClick}> 129 </button>
                 </div>
             </div>
           );
@@ -148,20 +161,20 @@ const FULLSANGAMbuttons = () => {
           return (
             <div className="buttons1">
               <div className="options-set1">
-                  <button> 570 </button>
-                  <button> 237 </button>
-                  <button> 480 </button>
-                  <button> 156 </button>
-                  <button> 390 </button>
-                  <button> 147 </button>
+                  <button value={570} onClick={fullButtonClick}> 570 </button>
+                  <button value={237} onClick={fullButtonClick}> 237 </button>
+                  <button value={480} onClick={fullButtonClick}> 480 </button>
+                  <button value={156} onClick={fullButtonClick}> 156 </button>
+                  <button value={390} onClick={fullButtonClick}> 390 </button>
+                  <button value={147} onClick={fullButtonClick}> 147 </button>
                 </div>
                 <div className="options-set2">
-                  <button> 679 </button>
-                  <button> 345 </button>
-                  <button> 138 </button>
-                  <button> 589 </button>
-                  <button> 246 </button>
-                  <button> 129 </button>
+                  <button value={679} onClick={fullButtonClick}> 679 </button>
+                  <button value={345} onClick={fullButtonClick}> 345 </button>
+                  <button value={138} onClick={fullButtonClick}> 138 </button>
+                  <button value={589} onClick={fullButtonClick}> 589 </button>
+                  <button value={246} onClick={fullButtonClick}> 246 </button>
+                  <button value={129} onClick={fullButtonClick}> 129 </button>
                 </div>
             </div>
           );
@@ -169,20 +182,20 @@ const FULLSANGAMbuttons = () => {
           return (
             <div className="buttons1">
               <div className="options-set1">
-                  <button> 570 </button>
-                  <button> 237 </button>
-                  <button> 480 </button>
-                  <button> 156 </button>
-                  <button> 390 </button>
-                  <button> 147 </button>
+                  <button value={570} onClick={fullButtonClick}> 570 </button>
+                  <button value={237} onClick={fullButtonClick}> 237 </button>
+                  <button value={480} onClick={fullButtonClick}> 480 </button>
+                  <button value={156} onClick={fullButtonClick}> 156 </button>
+                  <button value={390} onClick={fullButtonClick}> 390 </button>
+                  <button value={147} onClick={fullButtonClick}> 147 </button>
                 </div>
                 <div className="options-set2">
-                  <button> 679 </button>
-                  <button> 345 </button>
-                  <button> 138 </button>
-                  <button> 589 </button>
-                  <button> 246 </button>
-                  <button> 129 </button>
+                  <button value={679} onClick={fullButtonClick}> 679 </button>
+                  <button value={345} onClick={fullButtonClick}> 345 </button>
+                  <button value={138} onClick={fullButtonClick}> 138 </button>
+                  <button value={589} onClick={fullButtonClick}> 589 </button>
+                  <button value={246} onClick={fullButtonClick}> 246 </button>
+                  <button value={129} onClick={fullButtonClick}> 129 </button>
                 </div>
             </div>
           );
@@ -190,20 +203,20 @@ const FULLSANGAMbuttons = () => {
           return (
             <div className="buttons1">
               <div className="options-set1">
-                  <button> 570 </button>
-                  <button> 237 </button>
-                  <button> 480 </button>
-                  <button> 156 </button>
-                  <button> 390 </button>
-                  <button> 147 </button>
+                  <button value={570} onClick={fullButtonClick}> 570 </button>
+                  <button value={237} onClick={fullButtonClick}> 237 </button>
+                  <button value={480} onClick={fullButtonClick}> 480 </button>
+                  <button value={156} onClick={fullButtonClick}> 156 </button>
+                  <button value={390} onClick={fullButtonClick}> 390 </button>
+                  <button value={147} onClick={fullButtonClick}> 147 </button>
                 </div>
                 <div className="options-set2">
-                  <button> 679 </button>
-                  <button> 345 </button>
-                  <button> 138 </button>
-                  <button> 589 </button>
-                  <button> 246 </button>
-                  <button> 129 </button>
+                  <button value={679} onClick={fullButtonClick}> 679 </button>
+                  <button value={345} onClick={fullButtonClick}> 345 </button>
+                  <button value={138} onClick={fullButtonClick}> 138 </button>
+                  <button value={589} onClick={fullButtonClick}> 589 </button>
+                  <button value={246} onClick={fullButtonClick}> 246 </button>
+                  <button value={129} onClick={fullButtonClick}> 129 </button>
                 </div>
             </div>
           );
@@ -222,7 +235,7 @@ const FULLSANGAMbuttons = () => {
           <span className="sp-txt"> SELECT ALL 1 </span>
           <span
             className={`angle ${
-              selectSP === 1 && isAnimated
+              selectFull === 1 && isAnimated
                 ? "downtick-animation"
                 : "uptick-animation"
             }`}
@@ -230,14 +243,14 @@ const FULLSANGAMbuttons = () => {
             ^{" "}
           </span>{" "}
         </button>
-        {selectSP === 1 ? renderContent() : ""}
+        {selectFull === 1 ? renderContent() : ""}
 
         <button value={2} onClick={() => handleSelectClick(2)}>
           <span className="sp-txt"> SELECT ALL 2 </span>
           
           <span
             className={`angle ${
-              selectSP === 2 && isAnimated
+              selectFull === 2 && isAnimated
                 ? "downtick-animation"
                 : "uptick-animation"
             }`}
@@ -246,13 +259,13 @@ const FULLSANGAMbuttons = () => {
             ^{" "}
           </span>{" "}
         </button>
-        {selectSP === 2 ? renderContent() : ""}
+        {selectFull === 2 ? renderContent() : ""}
         <button value={3} onClick={() => handleSelectClick(3)}>
           <span className="sp-txt"> SELECT ALL 3 </span>
           
           <span
             className={`angle ${
-              selectSP === 3 && isAnimated
+              selectFull === 3 && isAnimated
                 ? "downtick-animation"
                 : "uptick-animation"
             }`}
@@ -261,13 +274,13 @@ const FULLSANGAMbuttons = () => {
             ^{" "}
           </span>{" "}
         </button>
-        {selectSP === 3 ? renderContent() : ""}
+        {selectFull === 3 ? renderContent() : ""}
         <button value={4} onClick={() => handleSelectClick(4)}>
           <span className="sp-txt"> SELECT ALL 4 </span>
           
           <span
             className={`angle ${
-              selectSP === 4 && isAnimated
+              selectFull === 4 && isAnimated
                 ? "downtick-animation"
                 : "uptick-animation"
             }`}
@@ -276,13 +289,13 @@ const FULLSANGAMbuttons = () => {
             ^{" "}
           </span>{" "}
         </button>
-        {selectSP === 4 ? renderContent() : ""}
+        {selectFull === 4 ? renderContent() : ""}
         <button value={5} onClick={() => handleSelectClick(5)}>
           <span className="sp-txt"> SELECT ALL 5 </span>
           
           <span
             className={`angle ${
-              selectSP === 5 && isAnimated
+              selectFull === 5 && isAnimated
                 ? "downtick-animation"
                 : "uptick-animation"
             }`}
@@ -291,13 +304,13 @@ const FULLSANGAMbuttons = () => {
             ^{" "}
           </span>{" "}
         </button>
-        {selectSP === 5 ? renderContent() : ""}
+        {selectFull === 5 ? renderContent() : ""}
         <button value={6} onClick={() => handleSelectClick(6)}>
           <span className="sp-txt"> SELECT ALL 6 </span>
           
           <span
             className={`angle ${
-              selectSP === 6 && isAnimated
+              selectFull === 6 && isAnimated
                 ? "downtick-animation"
                 : "uptick-animation"
             }`}
@@ -306,13 +319,13 @@ const FULLSANGAMbuttons = () => {
             ^{" "}
           </span>{" "}
         </button>
-        {selectSP === 6 ? renderContent() : ""}
+        {selectFull === 6 ? renderContent() : ""}
         <button value={7} onClick={() => handleSelectClick(7)}>
           <span className="sp-txt"> SELECT ALL 7 </span>
           
           <span
             className={`angle ${
-              selectSP === 7 && isAnimated
+              selectFull === 7 && isAnimated
                 ? "downtick-animation"
                 : "uptick-animation"
             }`}
@@ -321,13 +334,13 @@ const FULLSANGAMbuttons = () => {
             ^{" "}
           </span>{" "}
         </button>
-        {selectSP === 7 ? renderContent() : ""}
+        {selectFull === 7 ? renderContent() : ""}
         <button value={8} onClick={() => handleSelectClick(8)}>
           <span className="sp-txt"> SELECT ALL 8 </span>
           
           <span
             className={`angle ${
-              selectSP === 8 && isAnimated
+              selectFull === 8 && isAnimated
                 ? "downtick-animation"
                 : "uptick-animation"
             }`}
@@ -336,13 +349,13 @@ const FULLSANGAMbuttons = () => {
             ^{" "}
           </span>{" "}
         </button>
-        {selectSP === 8 ? renderContent() : ""}
+        {selectFull === 8 ? renderContent() : ""}
         <button value={9} onClick={() => handleSelectClick(9)}>
           <span className="sp-txt"> SELECT ALL 9 </span>
           
           <span
             className={`angle ${
-              selectSP === 9 && isAnimated
+              selectFull === 9 && isAnimated
                 ? "downtick-animation"
                 : "uptick-animation"
             }`}
@@ -351,7 +364,7 @@ const FULLSANGAMbuttons = () => {
             ^{" "}
           </span>{" "}
         </button>
-        {selectSP === 9 ? renderContent() : ""}
+        {selectFull === 9 ? renderContent() : ""}
         {/* {renderContent()} */}
       </div>
     </>

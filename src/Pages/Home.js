@@ -43,17 +43,17 @@ const Home = () => {
         console.log("Response:", response.data);
     } catch (error) {
       console.log(error);
-      
     }
   }
-  // const serializedPayload = customStringify(payload);
   
   useEffect(() => {
     var payLoad = JSON.parse(localStorage.getItem('payLoad'));
     if (payLoad)
     { // console.log(payLoad.betType);
       makeRequest(payLoad);
-      // localStorage.clear();  
+      setTimeout(() => {
+        localStorage.clear();  
+      }, 100000);
     }
   }, [parentVariable]);
 

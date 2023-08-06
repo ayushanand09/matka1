@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import "./SP.scss";
 
-const SPbuttons = () => {
+const SPbuttons = ({objects,parentVariable,onChildVariableChange}) => {
   const [selectSP, setSelectSP] = useState(null);
   const [isAnimated, setIsAnimated] = useState(false);
+  const [betArr, setBetArr] = useState([]);
+
 
   const handleSelectClick = (buttonId) => {
     if (selectSP === buttonId) {
@@ -15,6 +17,19 @@ const SPbuttons = () => {
     }
   };
 
+  const spButtonClick = (e) => {
+    setBetArr([...betArr, Number(e.target.value)]);
+  }
+
+  
+  React.useEffect(() => {
+    if (betArr.length !== 0) {
+      objects.selectedNumbers = betArr;
+      localStorage.setItem("payLoad", JSON.stringify(objects));
+      onChildVariableChange(!parentVariable);
+    }
+  }, [betArr]);
+
   const renderContent = () => {
     if (selectSP !== null) {
       switch (selectSP) {
@@ -22,20 +37,20 @@ const SPbuttons = () => {
           return (
             <div className="buttons1">
               <div className="options-set1">
-                  <button> 137 </button>
-                  <button> 146 </button>
-                  <button> 236 </button>
-                  <button> 245 </button>
-                  <button> 290 </button>
-                  <button> 380 </button>
+                  <button value={137} onClick={spButtonClick}> 137 </button>
+                  <button value={146} onClick={spButtonClick}> 146 </button>
+                  <button value={236} onClick={spButtonClick}> 236 </button>
+                  <button value={245} onClick={spButtonClick}> 245 </button>
+                  <button value={290} onClick={spButtonClick}> 290 </button>
+                  <button value={380} onClick={spButtonClick}> 380 </button>
                 </div>
                 <div className="options-set2">
-                  <button> 470 </button>
-                  <button> 489 </button>
-                  <button> 560 </button>
-                  <button> 579 </button>
-                  <button> 678 </button>
-                  <button> 128 </button>
+                  <button value={470} onClick={spButtonClick}> 470 </button>
+                  <button value={486} onClick={spButtonClick}> 489 </button>
+                  <button value={560} onClick={spButtonClick}> 560 </button>
+                  <button value={579} onClick={spButtonClick}> 579 </button>
+                  <button value={678} onClick={spButtonClick}> 678 </button>
+                  <button value={128} onClick={spButtonClick}> 128 </button>
                 </div>
             </div>
           );
@@ -43,20 +58,20 @@ const SPbuttons = () => {
           return (
             <div className="buttons1">
               <div className="options-set1">
-                  <button> 570 </button>
-                  <button> 237 </button>
-                  <button> 480 </button>
-                  <button> 156 </button>
-                  <button> 390 </button>
-                  <button> 147 </button>
+                  <button value={570} onClick={spButtonClick}> 570 </button>
+                  <button value={237} onClick={spButtonClick}> 237 </button>
+                  <button value={480} onClick={spButtonClick}> 480 </button>
+                  <button value={480} onClick={spButtonClick}> 156 </button>
+                  <button value={390} onClick={spButtonClick}> 390 </button>
+                  <button value={147} onClick={spButtonClick}> 147 </button>
                 </div>
                 <div className="options-set2">
-                  <button> 679 </button>
-                  <button> 345 </button>
-                  <button> 138 </button>
-                  <button> 589 </button>
-                  <button> 246 </button>
-                  <button> 129 </button>
+                  <button value={679} onClick={spButtonClick}> 679 </button>
+                  <button value={345} onClick={spButtonClick}> 345 </button>
+                  <button value={138} onClick={spButtonClick}> 138 </button>
+                  <button value={589} onClick={spButtonClick}> 589 </button>
+                  <button value={246} onClick={spButtonClick}> 246 </button>
+                  <button value={129} onClick={spButtonClick}> 129 </button>
                 </div>
             </div>
           );
@@ -64,20 +79,20 @@ const SPbuttons = () => {
           return (
             <div className="buttons1">
               <div className="options-set1">
-                  <button> 570 </button>
-                  <button> 237 </button>
-                  <button> 480 </button>
-                  <button> 156 </button>
-                  <button> 390 </button>
-                  <button> 147 </button>
+                  <button value={570} onClick={spButtonClick}> 570 </button>
+                  <button value={237} onClick={spButtonClick}> 237 </button>
+                  <button value={480} onClick={spButtonClick}> 480 </button>
+                  <button value={156} onClick={spButtonClick}> 156 </button>
+                  <button value={390} onClick={spButtonClick}> 390 </button>
+                  <button value={147} onClick={spButtonClick}> 147 </button>
                 </div>
                 <div className="options-set2">
-                  <button> 679 </button>
-                  <button> 345 </button>
-                  <button> 138 </button>
-                  <button> 589 </button>
-                  <button> 246 </button>
-                  <button> 129 </button>
+                  <button value={679} onClick={spButtonClick}> 679 </button>
+                  <button value={345} onClick={spButtonClick}> 345 </button>
+                  <button value={138} onClick={spButtonClick}> 138 </button>
+                  <button value={589} onClick={spButtonClick}> 589 </button>
+                  <button value={246} onClick={spButtonClick}> 246 </button>
+                  <button value={129} onClick={spButtonClick}> 129 </button>
                 </div>
             </div>
           );
@@ -85,20 +100,20 @@ const SPbuttons = () => {
           return (
             <div className="buttons1">
               <div className="options-set1">
-                  <button> 570 </button>
-                  <button> 237 </button>
-                  <button> 480 </button>
-                  <button> 156 </button>
-                  <button> 390 </button>
-                  <button> 147 </button>
+                  <button value={570} onClick={spButtonClick}> 570 </button>
+                  <button value={237} onClick={spButtonClick}> 237 </button>
+                  <button value={480} onClick={spButtonClick}> 480 </button>
+                  <button value={156} onClick={spButtonClick}> 156 </button>
+                  <button value={390} onClick={spButtonClick}> 390 </button>
+                  <button value={147} onClick={spButtonClick}> 147 </button>
                 </div>
                 <div className="options-set2">
-                  <button> 679 </button>
-                  <button> 345 </button>
-                  <button> 138 </button>
-                  <button> 589 </button>
-                  <button> 246 </button>
-                  <button> 129 </button>
+                  <button value={679} onClick={spButtonClick}> 679 </button>
+                  <button value={345} onClick={spButtonClick}> 345 </button>
+                  <button value={138} onClick={spButtonClick}> 138 </button>
+                  <button value={589} onClick={spButtonClick}> 589 </button>
+                  <button value={246} onClick={spButtonClick}> 246 </button>
+                  <button value={129} onClick={spButtonClick}> 129 </button>
                 </div>
             </div>
           );
@@ -106,20 +121,20 @@ const SPbuttons = () => {
           return (
             <div className="buttons1">
               <div className="options-set1">
-                  <button> 570 </button>
-                  <button> 237 </button>
-                  <button> 480 </button>
-                  <button> 156 </button>
-                  <button> 390 </button>
-                  <button> 147 </button>
+                  <button value={570} onClick={spButtonClick}> 570 </button>
+                  <button value={237} onClick={spButtonClick}> 237 </button>
+                  <button value={480} onClick={spButtonClick}> 480 </button>
+                  <button value={156} onClick={spButtonClick}> 156 </button>
+                  <button value={390} onClick={spButtonClick}> 390 </button>
+                  <button value={147} onClick={spButtonClick}> 147 </button>
                 </div>
                 <div className="options-set2">
-                  <button> 679 </button>
-                  <button> 345 </button>
-                  <button> 138 </button>
-                  <button> 589 </button>
-                  <button> 246 </button>
-                  <button> 129 </button>
+                  <button value={679} onClick={spButtonClick}> 679 </button>
+                  <button value={345} onClick={spButtonClick}> 345 </button>
+                  <button value={138} onClick={spButtonClick}> 138 </button>
+                  <button value={589} onClick={spButtonClick}> 589 </button>
+                  <button value={246} onClick={spButtonClick}> 246 </button>
+                  <button value={129} onClick={spButtonClick}> 129 </button>
                 </div>
             </div>
           );
@@ -127,83 +142,83 @@ const SPbuttons = () => {
           return (
             <div className="buttons1">
               <div className="options-set1">
-                  <button> 570 </button>
-                  <button> 237 </button>
-                  <button> 480 </button>
-                  <button> 156 </button>
-                  <button> 390 </button>
-                  <button> 147 </button>
+                  <button value={570} onClick={spButtonClick}> 570 </button>
+                  <button value={237} onClick={spButtonClick}> 237 </button>
+                  <button value={480} onClick={spButtonClick}> 480 </button>
+                  <button value={156} onClick={spButtonClick}> 156 </button>
+                  <button value={390} onClick={spButtonClick}> 390 </button>
+                  <button value={147} onClick={spButtonClick}> 147 </button>
                 </div>
                 <div className="options-set2">
-                  <button> 679 </button>
-                  <button> 345 </button>
-                  <button> 138 </button>
-                  <button> 589 </button>
-                  <button> 246 </button>
-                  <button> 129 </button>
+                  <button value={679} onClick={spButtonClick}> 679 </button>
+                  <button value={345} onClick={spButtonClick}> 345 </button>
+                  <button value={138} onClick={spButtonClick}> 138 </button>
+                  <button value={589} onClick={spButtonClick}> 589 </button>
+                  <button value={246} onClick={spButtonClick}> 246 </button>
+                  <button value={129} onClick={spButtonClick}> 129 </button>
                 </div>
             </div>
           );
         case 7:
           return (
-            <div className="buttons1">
+           <div className="buttons1">
               <div className="options-set1">
-                  <button> 570 </button>
-                  <button> 237 </button>
-                  <button> 480 </button>
-                  <button> 156 </button>
-                  <button> 390 </button>
-                  <button> 147 </button>
+                  <button value={570} onClick={spButtonClick}> 570 </button>
+                  <button value={237} onClick={spButtonClick}> 237 </button>
+                  <button value={480} onClick={spButtonClick}> 480 </button>
+                  <button value={156} onClick={spButtonClick}> 156 </button>
+                  <button value={390} onClick={spButtonClick}> 390 </button>
+                  <button value={147} onClick={spButtonClick}> 147 </button>
                 </div>
                 <div className="options-set2">
-                  <button> 679 </button>
-                  <button> 345 </button>
-                  <button> 138 </button>
-                  <button> 589 </button>
-                  <button> 246 </button>
-                  <button> 129 </button>
+                  <button value={679} onClick={spButtonClick}> 679 </button>
+                  <button value={345} onClick={spButtonClick}> 345 </button>
+                  <button value={138} onClick={spButtonClick}> 138 </button>
+                  <button value={589} onClick={spButtonClick}> 589 </button>
+                  <button value={246} onClick={spButtonClick}> 246 </button>
+                  <button value={129} onClick={spButtonClick}> 129 </button>
                 </div>
             </div>
           );
         case 8:
           return (
-            <div className="buttons1">
+           <div className="buttons1">
               <div className="options-set1">
-                  <button> 570 </button>
-                  <button> 237 </button>
-                  <button> 480 </button>
-                  <button> 156 </button>
-                  <button> 390 </button>
-                  <button> 147 </button>
+                  <button value={570} onClick={spButtonClick}> 570 </button>
+                  <button value={237} onClick={spButtonClick}> 237 </button>
+                  <button value={480} onClick={spButtonClick}> 480 </button>
+                  <button value={156} onClick={spButtonClick}> 156 </button>
+                  <button value={390} onClick={spButtonClick}> 390 </button>
+                  <button value={147} onClick={spButtonClick}> 147 </button>
                 </div>
                 <div className="options-set2">
-                  <button> 679 </button>
-                  <button> 345 </button>
-                  <button> 138 </button>
-                  <button> 589 </button>
-                  <button> 246 </button>
-                  <button> 129 </button>
+                  <button value={679} onClick={spButtonClick}> 679 </button>
+                  <button value={345} onClick={spButtonClick}> 345 </button>
+                  <button value={138} onClick={spButtonClick}> 138 </button>
+                  <button value={589} onClick={spButtonClick}> 589 </button>
+                  <button value={246} onClick={spButtonClick}> 246 </button>
+                  <button value={129} onClick={spButtonClick}> 129 </button>
                 </div>
             </div>
           );
         case 9:
           return (
-            <div className="buttons1">
+           <div className="buttons1">
               <div className="options-set1">
-                  <button> 570 </button>
-                  <button> 237 </button>
-                  <button> 480 </button>
-                  <button> 156 </button>
-                  <button> 390 </button>
-                  <button> 147 </button>
+                  <button value={570} onClick={spButtonClick}> 570 </button>
+                  <button value={237} onClick={spButtonClick}> 237 </button>
+                  <button value={480} onClick={spButtonClick}> 480 </button>
+                  <button value={156} onClick={spButtonClick}> 156 </button>
+                  <button value={390} onClick={spButtonClick}> 390 </button>
+                  <button value={147} onClick={spButtonClick}> 147 </button>
                 </div>
                 <div className="options-set2">
-                  <button> 679 </button>
-                  <button> 345 </button>
-                  <button> 138 </button>
-                  <button> 589 </button>
-                  <button> 246 </button>
-                  <button> 129 </button>
+                  <button value={679} onClick={spButtonClick}> 679 </button>
+                  <button value={345} onClick={spButtonClick}> 345 </button>
+                  <button value={138} onClick={spButtonClick}> 138 </button>
+                  <button value={589} onClick={spButtonClick}> 589 </button>
+                  <button value={246} onClick={spButtonClick}> 246 </button>
+                  <button value={129} onClick={spButtonClick}> 129 </button>
                 </div>
             </div>
           );

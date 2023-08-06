@@ -1,210 +1,547 @@
 import React, { useState } from "react";
 import "../SP/SP.scss"
 
-const DPbuttons = () => {
-  const [selectSP, setSelectSP] = useState(null);
+const DPbuttons = ({ objects, parentVariable, onChildVariableChange }) => {
+  const [selectDP, setselectDP] = useState(null);
   const [isAnimated, setIsAnimated] = useState(false);
+  const [betArr, setBetArr] = useState([]);
 
   const handleSelectClick = (buttonId) => {
-    if (selectSP === buttonId) {
-      setSelectSP(null);
+    if (selectDP === buttonId) {
+      setselectDP(null);
       setIsAnimated(false);
     } else {
-      setSelectSP(buttonId);
+      setselectDP(buttonId);
       setIsAnimated(true);
     }
   };
 
+  const dpButtonClick = (e) => {
+    setBetArr([...betArr, Number(e.target.value)]);
+  };
+
+  React.useEffect(() => {
+    if (betArr.length !== 0) {
+      objects.selectedNumbers = betArr;
+      localStorage.setItem("payLoad", JSON.stringify(objects));
+      onChildVariableChange(!parentVariable);
+    }
+  }, [betArr]);
+  
   const renderContent = () => {
-    if (selectSP !== null) {
-      switch (selectSP) {
+    if (selectDP !== null) {
+      switch (selectDP) {
         case 1:
           return (
             <div className="buttons1">
               <div className="options-set1">
-                  <button> 137 </button>
-                  <button> 146 </button>
-                  <button> 236 </button>
-                  <button> 245 </button>
-                  <button> 290 </button>
-                  <button> 380 </button>
-                </div>
-                <div className="options-set2">
-                  <button> 470 </button>
-                  <button> 489 </button>
-                  <button> 560 </button>
-                  <button> 579 </button>
-                  <button> 678 </button>
-                  <button> 128 </button>
-                </div>
+                <button value={570} onClick={dpButtonClick}>
+                  {" "}
+                  570{" "}
+                </button>
+                <button value={237} onClick={dpButtonClick}>
+                  {" "}
+                  237{" "}
+                </button>
+                <button value={480} onClick={dpButtonClick}>
+                  {" "}
+                  480{" "}
+                </button>
+                <button value={480} onClick={dpButtonClick}>
+                  {" "}
+                  156{" "}
+                </button>
+                <button value={390} onClick={dpButtonClick}>
+                  {" "}
+                  390{" "}
+                </button>
+                <button value={147} onClick={dpButtonClick}>
+                  {" "}
+                  147{" "}
+                </button>
+              </div>
+              <div className="options-set2">
+                <button value={679} onClick={dpButtonClick}>
+                  {" "}
+                  679{" "}
+                </button>
+                <button value={345} onClick={dpButtonClick}>
+                  {" "}
+                  345{" "}
+                </button>
+                <button value={138} onClick={dpButtonClick}>
+                  {" "}
+                  138{" "}
+                </button>
+                <button value={589} onClick={dpButtonClick}>
+                  {" "}
+                  589{" "}
+                </button>
+                <button value={246} onClick={dpButtonClick}>
+                  {" "}
+                  246{" "}
+                </button>
+                <button value={129} onClick={dpButtonClick}>
+                  {" "}
+                  129{" "}
+                </button>
+              </div>
             </div>
           );
         case 2:
           return (
             <div className="buttons1">
               <div className="options-set1">
-                  <button> 570 </button>
-                  <button> 237 </button>
-                  <button> 480 </button>
-                  <button> 156 </button>
-                  <button> 390 </button>
-                  <button> 147 </button>
-                </div>
-                <div className="options-set2">
-                  <button> 679 </button>
-                  <button> 345 </button>
-                  <button> 138 </button>
-                  <button> 589 </button>
-                  <button> 246 </button>
-                  <button> 129 </button>
-                </div>
+                <button value={570} onClick={dpButtonClick}>
+                  {" "}
+                  570{" "}
+                </button>
+                <button value={237} onClick={dpButtonClick}>
+                  {" "}
+                  237{" "}
+                </button>
+                <button value={480} onClick={dpButtonClick}>
+                  {" "}
+                  480{" "}
+                </button>
+                <button value={156} onClick={dpButtonClick}>
+                  {" "}
+                  156{" "}
+                </button>
+                <button value={390} onClick={dpButtonClick}>
+                  {" "}
+                  390{" "}
+                </button>
+                <button value={147} onClick={dpButtonClick}>
+                  {" "}
+                  147{" "}
+                </button>
+              </div>
+              <div className="options-set2">
+                <button value={679} onClick={dpButtonClick}>
+                  {" "}
+                  679{" "}
+                </button>
+                <button value={345} onClick={dpButtonClick}>
+                  {" "}
+                  345{" "}
+                </button>
+                <button value={138} onClick={dpButtonClick}>
+                  {" "}
+                  138{" "}
+                </button>
+                <button value={589} onClick={dpButtonClick}>
+                  {" "}
+                  589{" "}
+                </button>
+                <button value={246} onClick={dpButtonClick}>
+                  {" "}
+                  246{" "}
+                </button>
+                <button value={129} onClick={dpButtonClick}>
+                  {" "}
+                  129{" "}
+                </button>
+              </div>
             </div>
           );
         case 3:
           return (
             <div className="buttons1">
               <div className="options-set1">
-                  <button> 570 </button>
-                  <button> 237 </button>
-                  <button> 480 </button>
-                  <button> 156 </button>
-                  <button> 390 </button>
-                  <button> 147 </button>
-                </div>
-                <div className="options-set2">
-                  <button> 679 </button>
-                  <button> 345 </button>
-                  <button> 138 </button>
-                  <button> 589 </button>
-                  <button> 246 </button>
-                  <button> 129 </button>
-                </div>
+                <button value={570} onClick={dpButtonClick}>
+                  {" "}
+                  570{" "}
+                </button>
+                <button value={237} onClick={dpButtonClick}>
+                  {" "}
+                  237{" "}
+                </button>
+                <button value={480} onClick={dpButtonClick}>
+                  {" "}
+                  480{" "}
+                </button>
+                <button value={156} onClick={dpButtonClick}>
+                  {" "}
+                  156{" "}
+                </button>
+                <button value={390} onClick={dpButtonClick}>
+                  {" "}
+                  390{" "}
+                </button>
+                <button value={147} onClick={dpButtonClick}>
+                  {" "}
+                  147{" "}
+                </button>
+              </div>
+              <div className="options-set2">
+                <button value={679} onClick={dpButtonClick}>
+                  {" "}
+                  679{" "}
+                </button>
+                <button value={345} onClick={dpButtonClick}>
+                  {" "}
+                  345{" "}
+                </button>
+                <button value={138} onClick={dpButtonClick}>
+                  {" "}
+                  138{" "}
+                </button>
+                <button value={589} onClick={dpButtonClick}>
+                  {" "}
+                  589{" "}
+                </button>
+                <button value={246} onClick={dpButtonClick}>
+                  {" "}
+                  246{" "}
+                </button>
+                <button value={129} onClick={dpButtonClick}>
+                  {" "}
+                  129{" "}
+                </button>
+              </div>
             </div>
           );
         case 4:
           return (
             <div className="buttons1">
               <div className="options-set1">
-                  <button> 570 </button>
-                  <button> 237 </button>
-                  <button> 480 </button>
-                  <button> 156 </button>
-                  <button> 390 </button>
-                  <button> 147 </button>
-                </div>
-                <div className="options-set2">
-                  <button> 679 </button>
-                  <button> 345 </button>
-                  <button> 138 </button>
-                  <button> 589 </button>
-                  <button> 246 </button>
-                  <button> 129 </button>
-                </div>
+                <button value={570} onClick={dpButtonClick}>
+                  {" "}
+                  570{" "}
+                </button>
+                <button value={237} onClick={dpButtonClick}>
+                  {" "}
+                  237{" "}
+                </button>
+                <button value={480} onClick={dpButtonClick}>
+                  {" "}
+                  480{" "}
+                </button>
+                <button value={156} onClick={dpButtonClick}>
+                  {" "}
+                  156{" "}
+                </button>
+                <button value={390} onClick={dpButtonClick}>
+                  {" "}
+                  390{" "}
+                </button>
+                <button value={147} onClick={dpButtonClick}>
+                  {" "}
+                  147{" "}
+                </button>
+              </div>
+              <div className="options-set2">
+                <button value={679} onClick={dpButtonClick}>
+                  {" "}
+                  679{" "}
+                </button>
+                <button value={345} onClick={dpButtonClick}>
+                  {" "}
+                  345{" "}
+                </button>
+                <button value={138} onClick={dpButtonClick}>
+                  {" "}
+                  138{" "}
+                </button>
+                <button value={589} onClick={dpButtonClick}>
+                  {" "}
+                  589{" "}
+                </button>
+                <button value={246} onClick={dpButtonClick}>
+                  {" "}
+                  246{" "}
+                </button>
+                <button value={129} onClick={dpButtonClick}>
+                  {" "}
+                  129{" "}
+                </button>
+              </div>
             </div>
           );
         case 5:
           return (
             <div className="buttons1">
               <div className="options-set1">
-                  <button> 570 </button>
-                  <button> 237 </button>
-                  <button> 480 </button>
-                  <button> 156 </button>
-                  <button> 390 </button>
-                  <button> 147 </button>
-                </div>
-                <div className="options-set2">
-                  <button> 679 </button>
-                  <button> 345 </button>
-                  <button> 138 </button>
-                  <button> 589 </button>
-                  <button> 246 </button>
-                  <button> 129 </button>
-                </div>
+                <button value={570} onClick={dpButtonClick}>
+                  {" "}
+                  570{" "}
+                </button>
+                <button value={237} onClick={dpButtonClick}>
+                  {" "}
+                  237{" "}
+                </button>
+                <button value={480} onClick={dpButtonClick}>
+                  {" "}
+                  480{" "}
+                </button>
+                <button value={156} onClick={dpButtonClick}>
+                  {" "}
+                  156{" "}
+                </button>
+                <button value={390} onClick={dpButtonClick}>
+                  {" "}
+                  390{" "}
+                </button>
+                <button value={147} onClick={dpButtonClick}>
+                  {" "}
+                  147{" "}
+                </button>
+              </div>
+              <div className="options-set2">
+                <button value={679} onClick={dpButtonClick}>
+                  {" "}
+                  679{" "}
+                </button>
+                <button value={345} onClick={dpButtonClick}>
+                  {" "}
+                  345{" "}
+                </button>
+                <button value={138} onClick={dpButtonClick}>
+                  {" "}
+                  138{" "}
+                </button>
+                <button value={589} onClick={dpButtonClick}>
+                  {" "}
+                  589{" "}
+                </button>
+                <button value={246} onClick={dpButtonClick}>
+                  {" "}
+                  246{" "}
+                </button>
+                <button value={129} onClick={dpButtonClick}>
+                  {" "}
+                  129{" "}
+                </button>
+              </div>
             </div>
           );
         case 6:
           return (
             <div className="buttons1">
               <div className="options-set1">
-                  <button> 570 </button>
-                  <button> 237 </button>
-                  <button> 480 </button>
-                  <button> 156 </button>
-                  <button> 390 </button>
-                  <button> 147 </button>
-                </div>
-                <div className="options-set2">
-                  <button> 679 </button>
-                  <button> 345 </button>
-                  <button> 138 </button>
-                  <button> 589 </button>
-                  <button> 246 </button>
-                  <button> 129 </button>
-                </div>
+                <button value={570} onClick={dpButtonClick}>
+                  {" "}
+                  570{" "}
+                </button>
+                <button value={237} onClick={dpButtonClick}>
+                  {" "}
+                  237{" "}
+                </button>
+                <button value={480} onClick={dpButtonClick}>
+                  {" "}
+                  480{" "}
+                </button>
+                <button value={156} onClick={dpButtonClick}>
+                  {" "}
+                  156{" "}
+                </button>
+                <button value={390} onClick={dpButtonClick}>
+                  {" "}
+                  390{" "}
+                </button>
+                <button value={147} onClick={dpButtonClick}>
+                  {" "}
+                  147{" "}
+                </button>
+              </div>
+              <div className="options-set2">
+                <button value={679} onClick={dpButtonClick}>
+                  {" "}
+                  679{" "}
+                </button>
+                <button value={345} onClick={dpButtonClick}>
+                  {" "}
+                  345{" "}
+                </button>
+                <button value={138} onClick={dpButtonClick}>
+                  {" "}
+                  138{" "}
+                </button>
+                <button value={589} onClick={dpButtonClick}>
+                  {" "}
+                  589{" "}
+                </button>
+                <button value={246} onClick={dpButtonClick}>
+                  {" "}
+                  246{" "}
+                </button>
+                <button value={129} onClick={dpButtonClick}>
+                  {" "}
+                  129{" "}
+                </button>
+              </div>
             </div>
           );
         case 7:
           return (
             <div className="buttons1">
               <div className="options-set1">
-                  <button> 570 </button>
-                  <button> 237 </button>
-                  <button> 480 </button>
-                  <button> 156 </button>
-                  <button> 390 </button>
-                  <button> 147 </button>
-                </div>
-                <div className="options-set2">
-                  <button> 679 </button>
-                  <button> 345 </button>
-                  <button> 138 </button>
-                  <button> 589 </button>
-                  <button> 246 </button>
-                  <button> 129 </button>
-                </div>
+                <button value={570} onClick={dpButtonClick}>
+                  {" "}
+                  570{" "}
+                </button>
+                <button value={237} onClick={dpButtonClick}>
+                  {" "}
+                  237{" "}
+                </button>
+                <button value={480} onClick={dpButtonClick}>
+                  {" "}
+                  480{" "}
+                </button>
+                <button value={156} onClick={dpButtonClick}>
+                  {" "}
+                  156{" "}
+                </button>
+                <button value={390} onClick={dpButtonClick}>
+                  {" "}
+                  390{" "}
+                </button>
+                <button value={147} onClick={dpButtonClick}>
+                  {" "}
+                  147{" "}
+                </button>
+              </div>
+              <div className="options-set2">
+                <button value={679} onClick={dpButtonClick}>
+                  {" "}
+                  679{" "}
+                </button>
+                <button value={345} onClick={dpButtonClick}>
+                  {" "}
+                  345{" "}
+                </button>
+                <button value={138} onClick={dpButtonClick}>
+                  {" "}
+                  138{" "}
+                </button>
+                <button value={589} onClick={dpButtonClick}>
+                  {" "}
+                  589{" "}
+                </button>
+                <button value={246} onClick={dpButtonClick}>
+                  {" "}
+                  246{" "}
+                </button>
+                <button value={129} onClick={dpButtonClick}>
+                  {" "}
+                  129{" "}
+                </button>
+              </div>
             </div>
           );
         case 8:
           return (
             <div className="buttons1">
               <div className="options-set1">
-                  <button> 570 </button>
-                  <button> 237 </button>
-                  <button> 480 </button>
-                  <button> 156 </button>
-                  <button> 390 </button>
-                  <button> 147 </button>
-                </div>
-                <div className="options-set2">
-                  <button> 679 </button>
-                  <button> 345 </button>
-                  <button> 138 </button>
-                  <button> 589 </button>
-                  <button> 246 </button>
-                  <button> 129 </button>
-                </div>
+                <button value={570} onClick={dpButtonClick}>
+                  {" "}
+                  570{" "}
+                </button>
+                <button value={237} onClick={dpButtonClick}>
+                  {" "}
+                  237{" "}
+                </button>
+                <button value={480} onClick={dpButtonClick}>
+                  {" "}
+                  480{" "}
+                </button>
+                <button value={156} onClick={dpButtonClick}>
+                  {" "}
+                  156{" "}
+                </button>
+                <button value={390} onClick={dpButtonClick}>
+                  {" "}
+                  390{" "}
+                </button>
+                <button value={147} onClick={dpButtonClick}>
+                  {" "}
+                  147{" "}
+                </button>
+              </div>
+              <div className="options-set2">
+                <button value={679} onClick={dpButtonClick}>
+                  {" "}
+                  679{" "}
+                </button>
+                <button value={345} onClick={dpButtonClick}>
+                  {" "}
+                  345{" "}
+                </button>
+                <button value={138} onClick={dpButtonClick}>
+                  {" "}
+                  138{" "}
+                </button>
+                <button value={589} onClick={dpButtonClick}>
+                  {" "}
+                  589{" "}
+                </button>
+                <button value={246} onClick={dpButtonClick}>
+                  {" "}
+                  246{" "}
+                </button>
+                <button value={129} onClick={dpButtonClick}>
+                  {" "}
+                  129{" "}
+                </button>
+              </div>
             </div>
           );
         case 9:
           return (
             <div className="buttons1">
               <div className="options-set1">
-                  <button> 570 </button>
-                  <button> 237 </button>
-                  <button> 480 </button>
-                  <button> 156 </button>
-                  <button> 390 </button>
-                  <button> 147 </button>
-                </div>
-                <div className="options-set2">
-                  <button> 679 </button>
-                  <button> 345 </button>
-                  <button> 138 </button>
-                  <button> 589 </button>
-                  <button> 246 </button>
-                  <button> 129 </button>
-                </div>
+                <button value={570} onClick={dpButtonClick}>
+                  {" "}
+                  570{" "}
+                </button>
+                <button value={237} onClick={dpButtonClick}>
+                  {" "}
+                  237{" "}
+                </button>
+                <button value={480} onClick={dpButtonClick}>
+                  {" "}
+                  480{" "}
+                </button>
+                <button value={156} onClick={dpButtonClick}>
+                  {" "}
+                  156{" "}
+                </button>
+                <button value={390} onClick={dpButtonClick}>
+                  {" "}
+                  390{" "}
+                </button>
+                <button value={147} onClick={dpButtonClick}>
+                  {" "}
+                  147{" "}
+                </button>
+              </div>
+              <div className="options-set2">
+                <button value={679} onClick={dpButtonClick}>
+                  {" "}
+                  679{" "}
+                </button>
+                <button value={345} onClick={dpButtonClick}>
+                  {" "}
+                  345{" "}
+                </button>
+                <button value={138} onClick={dpButtonClick}>
+                  {" "}
+                  138{" "}
+                </button>
+                <button value={589} onClick={dpButtonClick}>
+                  {" "}
+                  589{" "}
+                </button>
+                <button value={246} onClick={dpButtonClick}>
+                  {" "}
+                  246{" "}
+                </button>
+                <button value={129} onClick={dpButtonClick}>
+                  {" "}
+                  129{" "}
+                </button>
+              </div>
             </div>
           );
         default:
@@ -222,7 +559,7 @@ const DPbuttons = () => {
           <span className="sp-txt"> SELECT ALL 1 </span>
           <span
             className={`angle ${
-              selectSP === 1 && isAnimated
+              selectDP === 1 && isAnimated
                 ? "downtick-animation"
                 : "uptick-animation"
             }`}
@@ -230,14 +567,13 @@ const DPbuttons = () => {
             ^{" "}
           </span>{" "}
         </button>
-        {selectSP === 1 ? renderContent() : ""}
+        {selectDP === 1 ? renderContent() : ""}
 
         <button value={2} onClick={() => handleSelectClick(2)}>
           <span className="sp-txt"> SELECT ALL 2 </span>
-          
           <span
             className={`angle ${
-              selectSP === 2 && isAnimated
+              selectDP === 2 && isAnimated
                 ? "downtick-animation"
                 : "uptick-animation"
             }`}
@@ -246,13 +582,12 @@ const DPbuttons = () => {
             ^{" "}
           </span>{" "}
         </button>
-        {selectSP === 2 ? renderContent() : ""}
+        {selectDP === 2 ? renderContent() : ""}
         <button value={3} onClick={() => handleSelectClick(3)}>
           <span className="sp-txt"> SELECT ALL 3 </span>
-          
           <span
             className={`angle ${
-              selectSP === 3 && isAnimated
+              selectDP === 3 && isAnimated
                 ? "downtick-animation"
                 : "uptick-animation"
             }`}
@@ -261,13 +596,12 @@ const DPbuttons = () => {
             ^{" "}
           </span>{" "}
         </button>
-        {selectSP === 3 ? renderContent() : ""}
+        {selectDP === 3 ? renderContent() : ""}
         <button value={4} onClick={() => handleSelectClick(4)}>
           <span className="sp-txt"> SELECT ALL 4 </span>
-          
           <span
             className={`angle ${
-              selectSP === 4 && isAnimated
+              selectDP === 4 && isAnimated
                 ? "downtick-animation"
                 : "uptick-animation"
             }`}
@@ -276,13 +610,12 @@ const DPbuttons = () => {
             ^{" "}
           </span>{" "}
         </button>
-        {selectSP === 4 ? renderContent() : ""}
+        {selectDP === 4 ? renderContent() : ""}
         <button value={5} onClick={() => handleSelectClick(5)}>
           <span className="sp-txt"> SELECT ALL 5 </span>
-          
           <span
             className={`angle ${
-              selectSP === 5 && isAnimated
+              selectDP === 5 && isAnimated
                 ? "downtick-animation"
                 : "uptick-animation"
             }`}
@@ -291,13 +624,12 @@ const DPbuttons = () => {
             ^{" "}
           </span>{" "}
         </button>
-        {selectSP === 5 ? renderContent() : ""}
+        {selectDP === 5 ? renderContent() : ""}
         <button value={6} onClick={() => handleSelectClick(6)}>
           <span className="sp-txt"> SELECT ALL 6 </span>
-          
           <span
             className={`angle ${
-              selectSP === 6 && isAnimated
+              selectDP === 6 && isAnimated
                 ? "downtick-animation"
                 : "uptick-animation"
             }`}
@@ -306,13 +638,12 @@ const DPbuttons = () => {
             ^{" "}
           </span>{" "}
         </button>
-        {selectSP === 6 ? renderContent() : ""}
+        {selectDP === 6 ? renderContent() : ""}
         <button value={7} onClick={() => handleSelectClick(7)}>
           <span className="sp-txt"> SELECT ALL 7 </span>
-          
           <span
             className={`angle ${
-              selectSP === 7 && isAnimated
+              selectDP === 7 && isAnimated
                 ? "downtick-animation"
                 : "uptick-animation"
             }`}
@@ -321,13 +652,12 @@ const DPbuttons = () => {
             ^{" "}
           </span>{" "}
         </button>
-        {selectSP === 7 ? renderContent() : ""}
+        {selectDP === 7 ? renderContent() : ""}
         <button value={8} onClick={() => handleSelectClick(8)}>
           <span className="sp-txt"> SELECT ALL 8 </span>
-          
           <span
             className={`angle ${
-              selectSP === 8 && isAnimated
+              selectDP === 8 && isAnimated
                 ? "downtick-animation"
                 : "uptick-animation"
             }`}
@@ -336,13 +666,12 @@ const DPbuttons = () => {
             ^{" "}
           </span>{" "}
         </button>
-        {selectSP === 8 ? renderContent() : ""}
+        {selectDP === 8 ? renderContent() : ""}
         <button value={9} onClick={() => handleSelectClick(9)}>
           <span className="sp-txt"> SELECT ALL 9 </span>
-          
           <span
             className={`angle ${
-              selectSP === 9 && isAnimated
+              selectDP === 9 && isAnimated
                 ? "downtick-animation"
                 : "uptick-animation"
             }`}
@@ -351,7 +680,7 @@ const DPbuttons = () => {
             ^{" "}
           </span>{" "}
         </button>
-        {selectSP === 9 ? renderContent() : ""}
+        {selectDP === 9 ? renderContent() : ""}
         {/* {renderContent()} */}
       </div>
     </>
